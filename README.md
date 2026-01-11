@@ -4,7 +4,7 @@
 I like building things that actually work — systems with real logic, real data flow, and real constraints.  
 Most of my projects are backend-heavy or full-stack, often built under hackathon or deadline pressure.
 
-I’m currently focused on preparing for **Software / Backend / Data Science internships**, and using GitHub as a place to show *what I can actually build*, not just what tools I know.
+I’m currently focused on preparing for **Software / Backend / Data Science internships**, and I use GitHub to show *how I think and build*, not just what tools I know.
 
 ---
 
@@ -19,9 +19,9 @@ I’m currently focused on preparing for **Software / Backend / Data Science int
 ## 🛠️ Tech Stack
 
 ### Languages & Frameworks
-| Python | JavaScript | TypeScript | C++ | React |
-|-------|------------|------------|-----|-------|---------|
-| ![Python](https://img.shields.io/badge/Python-%2314354C.svg?style=flat&logo=python&logoColor=white) | ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black) | ![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white) | ![C++](https://img.shields.io/badge/C++-%2300599C.svg?style=flat&logo=c%2B%2B&logoColor=white) | ![React](https://img.shields.io/badge/React-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)|
+| Python | JavaScript | TypeScript | C++ | React | NestJS |
+|-------|------------|------------|-----|-------|--------|
+| ![Python](https://img.shields.io/badge/Python-%2314354C.svg?style=flat&logo=python&logoColor=white) | ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black) | ![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white) | ![C++](https://img.shields.io/badge/C++-%2300599C.svg?style=flat&logo=c%2B%2B&logoColor=white) | ![React](https://img.shields.io/badge/React-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB) | ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat&logo=nestjs&logoColor=white) |
 
 ### Backend, Databases & Systems
 | Node.js | Express | MongoDB | PostgreSQL | Redis |
@@ -42,8 +42,8 @@ I’m currently focused on preparing for **Software / Backend / Data Science int
 - **LMS** — role-based authentication and system design  
 - **AI Automation** — practical use of the Gemini API for structured workflows  
 
-Each of these projects includes:
-- A clear explanation of how it works  
+Each project includes:
+- Clear explanations of how it works  
 - Architecture or ASCII diagrams  
 - Honest scope (MVPs, not overclaimed products)
 
@@ -58,6 +58,7 @@ Each of these projects includes:
 
 ---
 
-### A simple rule I follow
+### How I think about building
 
-If a project can’t be explained clearly, it’s not finished.
+I care more about **understanding the system** than chasing tools.  
+If something works, is explainable, and solves a real problem, it’s worth building — everything else is secondary.
