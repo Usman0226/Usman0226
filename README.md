@@ -4,7 +4,7 @@
 I like building things that actually work — systems with real logic, real data flow, and real constraints.  
 Most of my projects are backend-heavy or full-stack, often built under hackathon or deadline pressure.
 
-I’m currently focused on preparing for **Software / Backend / Data Science internships**, and I use GitHub to show *how I think and build*, not just what tools I know.
+I’m currently focused on preparing for ** Backend & Data Science **, .
 
 ---
 
