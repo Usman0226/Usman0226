@@ -38,8 +38,8 @@ for i, (tot, iso) in enumerate(weeks):
 svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-labelledby="t">
 <title id="t">{total} public contributions in the last year, one line per week</title>
 <style>
-.bar{{fill:#667085}}.zero{{fill:#e4e7ec}}.now{{fill:#1a9d5a}}.lbl{{fill:#667085}}.rule{{stroke:#e4e7ec;stroke-width:1}}
-@media (prefers-color-scheme:dark){{.bar{{fill:#98a2b3}}.zero{{fill:#2b3038}}.now{{fill:#3fb97a}}.lbl{{fill:#98a2b3}}.rule{{stroke:#2b3038}}}}
+.bar{{fill:#2383e2}}.zero{{fill:#e9e9e7}}.now{{fill:#1a9d5a}}.lbl{{fill:#787774}}.rule{{stroke:#e9e9e7;stroke-width:1}}
+@media (prefers-color-scheme:dark){{.bar{{fill:#529cca}}.zero{{fill:#373737}}.now{{fill:#3fb97a}}.lbl{{fill:#9b9a97}}.rule{{stroke:#373737}}}}
 </style>
 {T.defs()}
 <line class="rule" x1="0" x2="{W}" y1="62" y2="62"/>

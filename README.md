@@ -1,17 +1,60 @@
-<img src="./assets/hero.svg" alt="Full-stack and AI engineer building production systems for real users. 2,100 students clear their dues through NoDues at MITS. Three live platforms. One research project on LLM uncertainty, aimed at COPA 2027." width="100%">
+<img src="./assets/hero.svg" alt="Usman. Full-stack and AI engineer, studying at MITS Madanapalle, open to internships. Shipped: NoDues, D'FESTA 2K26, NCC Exam Portal. In progress: BizEasy and the ConformalGuard research project." width="100%">
 
-<img src="./assets/status.svg" alt="Live status of NoDues, D'FESTA 2K26 and the NCC Exam Portal, checked every six hours" width="100%">
+<img src="./assets/i-pin.svg" width="18" height="18" align="middle"> Madanapalle, Andhra Pradesh &nbsp; <img src="./assets/i-clock.svg" width="18" height="18" align="middle"> Usually replies within a day &nbsp; <img src="./assets/i-live.svg" width="18" height="18" align="middle"> Open to internships and collaborations
 
-## Selected work
+## <img src="./assets/i-live.svg" width="18" height="18" align="middle"> Live systems
 
-**[NoDues](https://www.nodues-arcclub.tech/)**  
-Semester clearance for about 2,100 students and 30+ faculty at MITS. Approvals update live over server-sent events, class setup imports Excel timetables and matches faculty names fuzzily, and sessions use httpOnly cookies. React, Express, MongoDB. [Source](https://github.com/Usman0226/NoDues).
+<img src="./assets/status.svg" alt="Live status table for NoDues, D'FESTA 2K26 and the NCC Exam Portal, refreshed every six hours" width="100%">
 
-**[D'FESTA 2K26](https://dfesta.in)**  
-The department symposium platform: ticketing, payments and a multi-tenant judging system. QR tickets are AES-signed, email fails over across three SMTP nodes, and UPI payments are reconciled by paise offset. Next.js, TypeScript, MongoDB.
+## <img src="./assets/i-layers.svg" width="18" height="18" align="middle"> Selected work
 
-**BizEasy**  
-A seller platform for small businesses in Andhra Pradesh, run over WhatsApp, where I'm the backend engineer. Each seller connects their own WhatsApp number to their own bot, and notifications go out in Telugu and English. Node.js, Meta Cloud API, Razorpay, WebSockets.
+<table>
+<tr>
+<td width="50%" valign="top">
+<img src="./assets/work-nodues.svg" alt="Animated clipboard whose checkboxes tick one by one" width="100%"><br>
+<b><a href="https://www.nodues-arcclub.tech/">NoDues</a></b> <img src="./assets/i-link.svg" width="13" height="13" align="middle"><br>
+Semester clearance for about 2,100 students and 30+ faculty at MITS. Approvals update live over SSE, and class setup imports Excel timetables with fuzzy faculty matching.<br>
+<code>React</code> <code>Express</code> <code>MongoDB</code> <a href="https://github.com/Usman0226/NoDues">Source</a>
+</td>
+<td width="50%" valign="top">
+<img src="./assets/work-dfesta.svg" alt="Animated ticket with a scanning QR code" width="100%"><br>
+<b><a href="https://dfesta.in">D'FESTA 2K26</a></b> <img src="./assets/i-link.svg" width="13" height="13" align="middle"><br>
+Ticketing, payments and judging for the department symposium. AES-signed QR tickets, three-node SMTP failover, and UPI payments reconciled by paise offset.<br>
+<code>Next.js</code> <code>TypeScript</code> <code>MongoDB</code>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<img src="./assets/work-bizeasy.svg" alt="Animated WhatsApp-style order with a pay button" width="100%"><br>
+<b>BizEasy</b><br>
+A seller platform for small businesses in Andhra Pradesh, run over <img src="./assets/i-chat.svg" width="16" height="16" align="middle"> WhatsApp. I'm the backend engineer. Each seller connects their own number to their own bot.<br>
+<code>Node.js</code> <code>Meta Cloud API</code> <code>Razorpay</code>
+</td>
+<td valign="top">
+<img src="./assets/work-ncc.svg" alt="Animated question card and running clock" width="100%"><br>
+<b><a href="https://ncc-exam-portal.vercel.app/">NCC Exam Portal</a></b> <img src="./assets/i-link.svg" width="13" height="13" align="middle"><br>
+Timed exams for the NCC Tirupati Unit with admin, officer and cadet <img src="./assets/i-shield.svg" width="16" height="16" align="middle"> roles. Tenant isolation lives in Prisma middleware, and the server decides when an exam <img src="./assets/i-timer.svg" width="16" height="16" align="middle"> ends.<br>
+<code>React</code> <code>Express</code> <code>PostgreSQL</code> <code>Prisma</code>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<img src="./assets/work-hireminds.svg" alt="Animated interview with a score bar filling" width="100%"><br>
+<b><a href="https://github.com/Usman0226/The-Brain">HireMinds AI</a></b> <img src="./assets/i-link.svg" width="13" height="13" align="middle"><br>
+An autonomous interviewer with an agentic loop, a multi-layer evaluation engine, a critic layer and a recruiter dashboard.<br>
+<code>FastAPI</code> <code>React</code> <code>Groq</code>
+</td>
+<td valign="top">
+<img src="./assets/work-conformal.svg" alt="Animated bell curve with a confidence interval that widens and narrows" width="100%"><br>
+<b>ConformalGuard</b><br>
+<img src="./assets/i-flask.svg" width="16" height="16" align="middle"> Research on measuring how uncertain an LLM is, using conformal prediction. I'm designing the non-conformity scorer. In progress at MITS, aimed at COPA 2027.<br>
+<code>Python</code> <code>Conformal prediction</code>
+</td>
+</tr>
+</table>
+
+<details>
+<summary><b>How a BizEasy order flows</b></summary>
 
 ```mermaid
 flowchart LR
@@ -24,41 +67,33 @@ flowchart LR
   A -->|WebSocket| S[Seller app]
 ```
 
-**[NCC Exam Portal](https://ncc-exam-portal.vercel.app/)**  
-Timed exams for the NCC Tirupati Unit with admin, officer and cadet roles. Tenant isolation is enforced in Prisma middleware, and the server decides when an exam ends, never the client clock. React, Express, PostgreSQL.
+</details>
 
-## Research and open source
+<details>
+<summary><b>More on GitHub</b></summary>
 
-**ConformalGuard.** A non-conformity scorer that measures how uncertain an LLM is, built on conformal prediction. In progress at MITS under faculty guidance, aimed at COPA 2027.
+- [OCR_BENCHMARKING](https://github.com/Usman0226/OCR_BENCHMARKING): benchmarking OCR engines (PaddleOCR, Tesseract) on scanned historical documents, with word-level bounding boxes.
+- [COMPONENTS](https://github.com/Usman0226/COMPONENTS): motion components for React. Copy, paste, done.
+- [Agent-Effi](https://github.com/Usman0226/Agent-Effi): makes your AI agent think like the laziest senior dev in the room.
+- [INCOIS-Sytem](https://github.com/Usman0226/INCOIS-Sytem) and [LifeLink](https://github.com/Usman0226/LifeLink): hackathon projects.
 
-**[OCR_BENCHMARKING](https://github.com/Usman0226/OCR_BENCHMARKING).** Benchmarking OCR engines (PaddleOCR, Tesseract) on scanned historical documents, with word-level bounding boxes.
+</details>
 
-**[COMPONENTS](https://github.com/Usman0226/COMPONENTS).** Motion components for React. Copy, paste, done.
+## <img src="./assets/i-trophy.svg" width="18" height="18" align="middle"> Recognition and leadership
 
-**[Agent-Effi](https://github.com/Usman0226/Agent-Effi).** Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.
+<img src="./assets/recognition.svg" alt="LifeLink hackathon winner. Smart India Hackathon 2025 with the INCOIS Scientist Dashboard, team Neural Navigators. Onco-IQ internship at NIT Pondicherry. IIC Innovation Coordinator and ARC Club Student Coordinator at MITS Madanapalle." width="100%">
 
-**[HireMinds AI](https://github.com/Usman0226/The-Brain).** An autonomous interviewer with an agentic loop and a critic layer. FastAPI, React, Groq.
+## <img src="./assets/i-layers.svg" width="18" height="18" align="middle"> Stack
 
-## Recognition and leadership
+<img src="./assets/stack.svg" alt="Stack. Product: React, Next.js, TypeScript, Tailwind, Framer Motion. Backend and data: Node.js, Express, NestJS, PostgreSQL, MongoDB, Prisma, Redis. AI: Python, FastAPI, LangChain, RAG pipelines, Gemini, Groq. Shipping: Vercel, Azure, Firebase, GitHub Actions." width="100%">
 
-Smart India Hackathon 2025: INCOIS Scientist Dashboard, with team Neural Navigators ([INCOIS-Sytem](https://github.com/Usman0226/INCOIS-Sytem)).  
-LifeLink hackathon: winner ([LifeLink](https://github.com/Usman0226/LifeLink)).  
-Onco·IQ internship at NIT Pondicherry.  
-IIC Innovation Coordinator and ARC Club Student Coordinator at MITS.
-
-## Stack
-
-Product: React, Next.js, TypeScript, Tailwind, Framer Motion  
-Backend and data: Node.js, Express, NestJS, PostgreSQL, MongoDB, Prisma, Redis  
-AI: Python, FastAPI, LangChain, RAG pipelines, Gemini, Groq  
-Shipping: Vercel, Azure, Firebase, GitHub Actions
-
-## Public activity
+## <img src="./assets/i-clock.svg" width="18" height="18" align="middle"> Public activity
 
 <img src="./assets/activity.svg" alt="One line per week of public contributions over the last year" width="100%">
 
-Client and event platforms live in private repositories, so this strip shows only part of the work.
+Client and event platforms live in private repositories, so this shows only part of the work.
 
-## Contact
+## <img src="./assets/i-mail.svg" width="18" height="18" align="middle"> Contact
 
-[LinkedIn](https://www.linkedin.com/in/chandan-usman-gani-163aa9321/) or [chandanusmangani@gmail.com](mailto:chandanusmangani@gmail.com).
+<a href="https://www.linkedin.com/in/chandan-usman-gani-163aa9321/"><img src="./assets/btn-linkedin.svg" alt="LinkedIn" height="40"></a>
+<a href="mailto:chandanusmangani@gmail.com"><img src="./assets/btn-email.svg" alt="Email me" height="40"></a>
