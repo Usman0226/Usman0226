@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" width="400" height="180" role="img" aria-labelledby="t">
+<title id="t">NoDues clearance: animated checklist whose student approvals tick sequentially</title>
+<style>
+.ink{fill:#37352f}.mut{fill:#787774}.rule{stroke:#e9e9e7;stroke-width:1}
+.ln{fill:none;stroke:#37352f;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.thin{stroke-width:1.5;stroke:#787774}
+.bgY{fill:#fbf3db}.bgB{fill:#e7f3f8}.bgP{fill:#f9eef3}.bgG{fill:#edf3ec}.bgO{fill:#fbebe3}.bgN{fill:#f1f1ef}.bgR{fill:#fbebe9}
+.fY{fill:#fdecc8}.fB{fill:#d3e5ef}.fP{fill:#f5e0e9}.fG{fill:#dbeddb}.fO{fill:#fadec9}.fR{fill:#fadbd8}.paper{fill:#ffffff}.solid{fill:#37352f;stroke:none}
+.cb{fill:#d3e5ef}.cg{fill:#dbeddb}.co{fill:#fadec9}.cp{fill:#f5e0e9}.cy{fill:#fdecc8}.hov{fill:#f1f1ef}
+.scan{fill:none;stroke:#2383e2;stroke-width:2.5;stroke-linecap:round}.blue{fill:#2383e2}
+.blue-ln{fill:none;stroke:#2383e2;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.green{fill:#1a9d5a}.green-ln{fill:none;stroke:#1a9d5a;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.red{fill:#e03e3e}.red-ln{fill:none;stroke:#e03e3e;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.txt-sm{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:10px;font-weight:600;fill:#787774}
+.txt-red{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:0.5px;fill:#e03e3e}
+.txt-stamp{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:1px;fill:#1a9d5a}
+.txt-mono{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;font-size:10.5px;font-weight:600;fill:#37352f}
+@media (prefers-color-scheme:dark){
+.ink{fill:#e6e5e3}.mut{fill:#9b9a97}.rule{stroke:#373737}
+.ln{stroke:#e6e5e3}.thin{stroke:#9b9a97}
+.bgY{fill:#342f21}.bgB{fill:#1d2a32}.bgP{fill:#30262b}.bgG{fill:#202b24}.bgO{fill:#33271f}.bgN{fill:#262626}.bgR{fill:#342323}
+.fY{fill:#4d4228}.fB{fill:#29414f}.fP{fill:#4a3641}.fG{fill:#2c4638}.fO{fill:#553d29}.fR{fill:#4e2929}.paper{fill:#1f1f1f}.solid{fill:#e6e5e3}
+.cb{fill:#203c4c}.cg{fill:#1f3a2c}.co{fill:#4a3321}.cp{fill:#43303b}.cy{fill:#463c24}.hov{fill:#262626}
+.scan{stroke:#529cca}.blue{fill:#529cca}.blue-ln{stroke:#529cca}
+.green{fill:#3fb97a}.green-ln{stroke:#3fb97a}
+.red{fill:#eb5757}.red-ln{stroke:#eb5757}
+.txt-sm{fill:#9b9a97}.txt-red{fill:#eb5757}.txt-stamp{fill:#3fb97a}.txt-mono{fill:#e6e5e3}
+}
+</style>
+<defs>
+<filter id="wob" x="-5%" y="-8%" width="110%" height="116%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="5" result="n"/>
+  <feDisplacementMap in="SourceGraphic" in2="n" scale="2.2"/>
+</filter>
+</defs>
+<rect class="bgG" width="400" height="180" rx="6"/>
+<g filter="url(#wob)">
+  <!-- Clipboard Backing -->
+  <rect class="solid" x="96" y="24" width="208" height="138" rx="10" opacity="0.12"/>
+  <rect class="ln paper" x="92" y="20" width="216" height="142" rx="8"/>
+  <!-- Clip at top -->
+  <rect class="solid" x="166" y="12" width="68" height="18" rx="4" opacity="0.85"/>
+  <rect class="ln paper" x="178" y="16" width="44" height="10" rx="3"/>
+
+  <!-- Row 1: Dept Library -->
+  <rect class="ln" x="114" y="46" width="14" height="14" rx="3"/>
+  <path class="green-ln" d="M117 53 L121 57 L127 49" stroke-dasharray="16" stroke-dashoffset="16">
+    <animate attributeName="stroke-dashoffset" values="16;16;0;0;16" keyTimes="0;0.12;0.22;0.88;0.96" dur="5.5s" repeatCount="indefinite"/>
+  </path>
+  <path class="ln" d="M138 53 H215"/>
+  <path class="ln thin" d="M225 53 H250"/>
+
+  <!-- Row 2: Lab Equipment -->
+  <rect class="ln" x="114" y="70" width="14" height="14" rx="3"/>
+  <path class="green-ln" d="M117 77 L121 81 L127 73" stroke-dasharray="16" stroke-dashoffset="16">
+    <animate attributeName="stroke-dashoffset" values="16;16;0;0;16" keyTimes="0;0.32;0.42;0.88;0.96" dur="5.5s" repeatCount="indefinite"/>
+  </path>
+  <path class="ln" d="M138 77 H235"/>
+  <path class="ln thin" d="M245 77 H270"/>
+
+  <!-- Row 3: Faculty Adviser -->
+  <rect class="ln" x="114" y="94" width="14" height="14" rx="3"/>
+  <path class="green-ln" d="M117 101 L121 105 L127 97" stroke-dasharray="16" stroke-dashoffset="16">
+    <animate attributeName="stroke-dashoffset" values="16;16;0;0;16" keyTimes="0;0.52;0.62;0.88;0.96" dur="5.5s" repeatCount="indefinite"/>
+  </path>
+  <path class="ln" d="M138 101 H205"/>
+  <path class="ln thin" d="M215 101 H260"/>
+
+  <!-- Clearance Progress bar -->
+  <rect class="ln paper" x="114" y="126" width="172" height="14" rx="7"/>
+  <rect class="fG" x="116" y="128" width="20" height="10" rx="5">
+    <animate attributeName="width" values="20;60;115;168;168;20" keyTimes="0;0.25;0.45;0.65;0.88;0.98" dur="5.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1"/>
+  </rect>
+
+  <!-- Approved Stamp Banner popping in -->
+  <g transform="translate(200, 78) rotate(-10)">
+    <g>
+      <rect class="paper" x="-5" y="-14" width="94" height="26" rx="4" stroke="#1a9d5a" stroke-width="2"/>
+      <text class="txt-stamp" x="6" y="3">CLEARED ✓</text>
+      <animateTransform attributeName="transform" type="scale" values="0;0;1.15;1.0;1.0;0" keyTimes="0;0.63;0.70;0.74;0.88;0.95" dur="5.5s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- Decorative stars -->
+  <path class="ln thin" d="M54 42 V54 M48 48 H60"/>
+  <path class="ln thin" d="M346 128 V138 M341 133 H351"/>
+</g>
+</svg>

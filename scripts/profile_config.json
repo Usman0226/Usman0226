@@ -1,0 +1,54 @@
+{
+  "theme": "blue",
+  "colors": {
+    "primary": {
+      "light": "#2383e2",
+      "dark": "#529cca"
+    },
+    "primary_bg": {
+      "light": "#e7f3f8",
+      "dark": "#182833"
+    },
+    "primary_txt": {
+      "light": "#1967b2",
+      "dark": "#6cb3e8"
+    },
+    "accent_green": {
+      "light": "#1a9d5a",
+      "dark": "#3fb97a"
+    },
+    "accent_amber": {
+      "light": "#d97706",
+      "dark": "#f59e0b"
+    }
+  },
+  "hero": {
+    "name": "Usman",
+    "status": "Available for freelance & contracts",
+    "bio1": "Full-stack and AI engineer building real-time web applications and backend systems.",
+    "bio2": "Focused on reliable architecture, clean interfaces, and shipping for clients and teams.",
+    "metric1": {
+      "val": "2,100+",
+      "l1": "students cleared dues",
+      "l2": "through NoDues at MITS"
+    },
+    "metric2": {
+      "val": "4",
+      "l1": "production platforms live",
+      "l2": "NoDues \u00b7 D\u2019FESTA \u00b7 NCC \u00b7 BizEasy"
+    },
+    "metric3": {
+      "val": "10+",
+      "l1": "tools, APIs & motion libraries",
+      "l2": "React motion, OCR benchmarks & agents"
+    }
+  },
+  "activity": {
+    "username": "Usman0226",
+    "color": {
+      "light": "#2383e2",
+      "dark": "#529cca"
+    },
+    "fill_opacity": "0.14"
+  }
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the live sites and redraw assets/status.svg as a Notion-style table.
+"""Check the live sites and redraw assets/status.svg as a monochrome index table.
 Run by a GitHub Action every few hours.
 Usage: python scripts/status.py [--offline]   (--offline draws the 'not checked yet' state)
 """
@@ -7,6 +7,14 @@ import os, sys, time, urllib.request, urllib.error
 from datetime import datetime, timezone, timedelta
 from urllib.parse import urlparse
 from typeset import Text
+
+CSS = """<style>
+.ink{fill:#161616}.mut{fill:#6e6e6e}.faint{fill:#b6b6b6}.rule{stroke:#e2e2e2;stroke-width:1}.hov{fill:#f4f4f4}
+.outline{fill:none;stroke:#c7c7c7;stroke-width:1}.up{fill:#1a9d5a}.ring{fill:none;stroke:#1a9d5a;stroke-width:1}.down{fill:#c0392b}
+@media (prefers-color-scheme:dark){
+.ink{fill:#f0f0f0}.mut{fill:#9a9a9a}.faint{fill:#4d4d4d}.rule{stroke:#2b2b2b}.hov{fill:#1e1e1e}
+.outline{stroke:#3a3a3a}.up{fill:#3fb97a}.ring{stroke:#3fb97a}.down{fill:#e0574a}}
+</style>"""
 
 SITES = [("NoDues", "https://www.nodues-arcclub.tech/"),
          ("D\u2019FESTA 2K26", "https://dfesta.in"),
@@ -22,49 +30,39 @@ def check(url):
     except Exception: return None, None
     return code, int((time.time() - t) * 1000)
 
-W, HEADH, ROWH = 880, 34, 46
+W, HEADH, ROWH = 880, 30, 42
 T = Text()
 ist = datetime.now(timezone.utc) + timedelta(hours=5, minutes=30)
-stamp = "Not checked yet" if offline else "Checked " + ist.strftime("%d %b %Y, %H:%M") + " IST, refreshed every six hours"
-COLS = (0, 230, 420, 740)
-els = [T.put(h, 400, 13, x, 22, "mut") for h, x in zip(("Name", "Status", "Address", "Response"), COLS)]
+stamp = "Not checked yet" if offline else "Checked " + ist.strftime("%d %b, %H:%M") + " IST, every six hours"
+COLS = (0, 430, 700)
+els = [T.put(h, "sans400", 12.5, x, 18, "faint") for h, x in zip(("Name", "Status", "Response"), COLS)]
 els.append(f'<line class="rule" x1="0" x2="{W}" y1="{HEADH}" y2="{HEADH}"/>')
 n = len(SITES)
 for i, (name, url) in enumerate(SITES):
     y = HEADH + i * ROWH
     a, b = i / n, (i + 1) / n
-    kt = f"0;{max(a, 0.001):.3f};{a+0.03:.3f};{b-0.03:.3f};{b:.3f};1"
-    els.append(f'<rect class="hov" x="-8" y="{y+3}" width="{W+16}" height="{ROWH-6}" rx="6" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="{kt}" dur="12s" begin="1s" repeatCount="indefinite"/></rect>')
+    kt = f"0;{max(a,0.001):.3f};{a+0.03:.3f};{b-0.03:.3f};{b:.3f};1"
+    els.append(f'<rect class="hov" x="-10" y="{y+2}" width="900" height="{ROWH-4}" rx="4" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="{kt}" dur="10s" begin="1s" repeatCount="indefinite"/></rect>')
     code, ms = (None, None) if offline else check(url)
-    host = urlparse(url).netloc.removeprefix("www.")
-    if offline: kind, label = "cn", "Not checked yet"
-    elif code is not None and code < 400: kind, label = "cg", "Live"
-    else: kind, label = "cr", "Down" if code is None else f"Down, HTTP {code}"
-    tw = T.width(label, 400, 13.5) + 18 + (14 if kind == "cg" else 0)
-    cy = y + 12
-    els.append(f'<rect class="{kind}" x="{COLS[1]}" y="{cy}" width="{tw:.1f}" height="22" rx="4"/>')
-    tx = COLS[1] + 9
-    if kind == "cg":
-        els.append(f'<circle class="up" cx="{tx+3.5}" cy="{cy+11}" r="3.2"/><circle class="ring" cx="{tx+3.5}" cy="{cy+11}" r="3.2">'
+    cy = y + ROWH / 2
+    if offline: dot, label, lcls = "outline", "Not checked yet", "mut"
+    elif code is not None and code < 400: dot, label, lcls = "up", "Live", "ink"
+    else: dot, label, lcls = "down", ("Down" if code is None else f"HTTP {code}"), "ink"
+    els.append(T.put(name, "sans600", 16, COLS[0], cy + 5, "ink"))
+    if dot == "up":
+        els.append(f'<circle class="up" cx="{COLS[1]+3.5}" cy="{cy}" r="3.2"/><circle class="ring" cx="{COLS[1]+3.5}" cy="{cy}" r="3.2">'
                    f'<animate attributeName="r" values="3.2;9;9" keyTimes="0;0.8;1" dur="3.2s" begin="{i*0.5}s" repeatCount="indefinite"/>'
-                   f'<animate attributeName="opacity" values="0.55;0;0" keyTimes="0;0.8;1" dur="3.2s" begin="{i*0.5}s" repeatCount="indefinite"/></circle>')
-        tx += 14
-    els.append(T.put(label, 400, 13.5, tx, cy + 15.5, "ink"))
-    els.append(T.put(name, 600, 15, COLS[0], y + 29, "ink"))
-    els.append(T.put(host, 400, 14.5, COLS[2], y + 29, "mut"))
-    els.append(T.put("-" if ms is None else f"{ms} ms", 400, 14.5, COLS[3], y + 29, "mut"))
-    els.append(f'<line class="rule" x1="0" x2="{W}" y1="{y+ROWH}" y2="{y+ROWH}"/>')
-H = HEADH + n * ROWH + 30
-els.append(T.put(stamp, 400, 12.5, 0, H - 8, "mut"))
-svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 0 {W+16} {H}" width="{W+16}" height="{H}" role="img" aria-labelledby="t">
+                   f'<animate attributeName="opacity" values="0.5;0;0" keyTimes="0;0.8;1" dur="3.2s" begin="{i*0.5}s" repeatCount="indefinite"/></circle>')
+    else:
+        els.append(f'<circle class="{dot}" cx="{COLS[1]+3.5}" cy="{cy}" r="3.2"/>')
+    els.append(T.put(label, "sans400", 14, COLS[1] + 16, cy + 5, lcls))
+    els.append(T.put("-" if ms is None else f"{ms} ms", "sans400", 14, COLS[2], cy + 5, "mut"))
+    if i < n - 1: els.append(f'<line class="rule" x1="0" x2="{W}" y1="{y+ROWH}" y2="{y+ROWH}"/>')
+H = HEADH + n * ROWH + 26
+els.append(T.put(stamp, "sans400", 12, 0, H - 6, "faint"))
+svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-labelledby="t">
 <title id="t">Live status of three deployed systems. {stamp}.</title>
-<style>
-.ink{{fill:#37352f}}.mut{{fill:#787774}}.rule{{stroke:#e9e9e7;stroke-width:1}}.hov{{fill:#f1f1ef}}
-.cg{{fill:#dbeddb}}.cr{{fill:#ffe2dd}}.cn{{fill:#e9e9e7}}.up{{fill:#1a9d5a}}.ring{{fill:none;stroke:#1a9d5a;stroke-width:1}}
-@media (prefers-color-scheme:dark){{.ink{{fill:#e6e5e3}}.mut{{fill:#9b9a97}}.rule{{stroke:#373737}}.hov{{fill:#262626}}
-.cg{{fill:#1f3a2c}}.cr{{fill:#5d2a27}}.cn{{fill:#373737}}.up{{fill:#3fb97a}}.ring{{stroke:#3fb97a}}}}
-</style>
-{T.defs()}
+{CSS}{T.defs()}
 {chr(10).join(els)}
 </svg>
 """
