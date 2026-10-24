@@ -1,50 +1,58 @@
 <img src="./assets/hero.svg" alt="Usman. Full-stack and AI engineer building real-time web applications and backend systems. Available for internships & freelance. 2,100+ students cleared dues through NoDues at MITS. 4 production platforms live. 10+ shipped tools, APIs, and libraries." width="100%">
 
-<img src="./assets/i-pin.svg" width="18" height="18" align="middle"> Madanapalle, Andhra Pradesh &nbsp;·&nbsp; Available for freelance & select client work
+<p><img src="./assets/i-pin.svg" width="16" height="16" valign="middle"/> &nbsp;Madanapalle, Andhra Pradesh &nbsp;·&nbsp; Available for freelance</p>
 
-## <img src="./assets/i-layers.svg" width="18" height="18" align="middle"> Selected work
+<h2><img src="./assets/i-layers.svg" width="20" height="20" valign="middle"/> &nbsp;Selected work</h2>
+
+<table>
+<tr>
+<td width="100%" valign="top">
+<a href="https://www.nodues-arcclub.tech/"><img src="./assets/work-nodues-wide.svg" alt="NoDues - Semester clearance platform for 2,100+ students with SSE" width="100%"></a><br>
+<b><a href="https://www.nodues-arcclub.tech/">NoDues</a></b> &nbsp; <a href="https://www.nodues-arcclub.tech/"><img src="./assets/i-link.svg" width="13" height="13" align="middle"></a> &nbsp; <a href="https://github.com/Usman0226/NoDues"><img src="./assets/i-link.svg" width="13" height="13" align="middle"> Source</a><br>
+Flagship institutional clearance platform for ~2,100 students and 30+ faculty across departments at MITS Madanapalle. Built to eliminate paper clearance runs and queues during finals. Approvals update live over Server-Sent Events (SSE), and onboarding imports heterogeneous Excel timetables with fuzzy faculty matching.<br><br>
+<img src="./assets/badges/nodues-stack.svg" height="24" alt="React, Express, MongoDB, Node.js, SSE, xlsx">
+</td>
+</tr>
+</table>
 
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://www.nodues-arcclub.tech/"><img src="./assets/work-nodues.svg" alt="NoDues - Animated clearance checklist" width="100%"></a><br>
-<b><a href="https://www.nodues-arcclub.tech/">NoDues</a></b> &nbsp; <a href="https://www.nodues-arcclub.tech/"><img src="./assets/i-link.svg" width="13" height="13" align="middle"></a><br>
-Semester clearance for ~2,100 students and 30+ faculty at MITS. Approvals update live over SSE, and class setup imports Excel timetables with fuzzy faculty matching.<br>
-<code>React</code> <code>Express</code> <code>MongoDB</code> &nbsp;·&nbsp; <a href="https://github.com/Usman0226/NoDues">Source</a>
+<a href="https://github.com/Usman0226/LifeLink"><img src="./assets/work-lifelink.svg" alt="LifeLink - Emergency medical dispatch with geolocation route and hospital radar" width="100%"></a><br>
+<b><a href="https://github.com/Usman0226/LifeLink">LifeLink</a></b> &nbsp; <a href="https://github.com/Usman0226/LifeLink"><img src="./assets/i-link.svg" width="13" height="13" align="middle"></a> &nbsp; <a href="https://github.com/Usman0226/LifeLink"><img src="./assets/i-link.svg" width="13" height="13" align="middle"> Source</a><br>
+<img src="./assets/i-trophy.svg" width="15" height="15" align="middle"> <b>1st Place Hackathon Winner</b> · Emergency medical dispatch platform connecting hospital triage, emergency vehicles, and patients with real-time geolocation tracking.<br><br>
+<img src="./assets/badges/lifelink-stack.svg" height="24" alt="React, Node.js, Socket.io, Leaflet, GeoJSON">
 </td>
 <td width="50%" valign="top">
 <a href="https://dfesta.in"><img src="./assets/work-dfesta.svg" alt="D'FESTA 2K26 - Animated event pass with scanning QR laser" width="100%"></a><br>
 <b><a href="https://dfesta.in">D'FESTA 2K26</a></b> &nbsp; <a href="https://dfesta.in"><img src="./assets/i-link.svg" width="13" height="13" align="middle"></a><br>
-Ticketing, payments and judging for the department symposium. AES-signed QR tickets, triple-node SMTP failover, and paise-offset UPI reconciliation.<br>
-<code>Next.js 16</code> <code>TypeScript</code> <code>MongoDB</code>
+Ticketing, payments, and symposium judging platform. Features AES-signed QR tickets with offline gate verification, triple-node SMTP failover, and paise-offset UPI reconciliation.<br><br>
+<img src="./assets/badges/dfesta-stack.svg" height="24" alt="Next.js, TypeScript, MongoDB, Tailwind">
 </td>
 </tr>
 <tr>
-<td valign="top">
+<td width="50%" valign="top">
 <img src="./assets/work-bizeasy.svg" alt="BizEasy - WhatsApp-style order with payment confirmation" width="100%"><br>
 <b>BizEasy</b><br>
-A seller platform for small businesses in Andhra Pradesh, run over <img src="./assets/i-chat.svg" width="15" height="15" align="middle"> WhatsApp. I'm the backend engineer. Each seller connects their own number to their own bot.<br>
-<code>Node.js</code> <code>Meta Cloud API</code> <code>Razorpay</code>
+A distributed commerce backend for local retailers in Andhra Pradesh operating natively over <img src="./assets/i-chat.svg" width="15" height="15" align="middle"> WhatsApp. I'm the backend engineer. Each seller connects their own number to their own bot state machine with Razorpay payment reconciliation.<br><br>
+<img src="./assets/badges/bizeasy-stack.svg" height="24" alt="Node.js, Meta Cloud API, Razorpay, Webhooks">
 </td>
-<td valign="top">
-<a href="https://ncc-exam-portal.vercel.app/"><img src="./assets/work-ncc.svg" alt="NCC Exam Portal - Animated question card with ticking exam clock" width="100%"></a><br>
-<b><a href="https://ncc-exam-portal.vercel.app/">NCC Exam Portal</a></b> &nbsp; <a href="https://ncc-exam-portal.vercel.app/"><img src="./assets/i-link.svg" width="13" height="13" align="middle"></a><br>
-Timed exams for the NCC Tirupati Unit with admin, officer and cadet <img src="./assets/i-shield.svg" width="15" height="15" align="middle"> roles. Tenant isolation lives in Prisma middleware, and the server decides when an exam <img src="./assets/i-timer.svg" width="15" height="15" align="middle"> ends.<br>
-<code>React</code> <code>Express</code> <code>PostgreSQL</code> <code>Prisma</code>
+<td width="50%" valign="top">
+<a href="https://github.com/Usman0226/The-Brain"><img src="./assets/work-hireminds.svg" alt="HireMinds AI - Animated interview with filling score bar" width="100%"></a><br>
+<b><a href="https://github.com/Usman0226/The-Brain">HireMinds AI</a></b> &nbsp; <a href="https://github.com/Usman0226/The-Brain"><img src="./assets/i-link.svg" width="13" height="13" align="middle"></a> &nbsp; <a href="https://github.com/Usman0226/The-Brain"><img src="./assets/i-link.svg" width="13" height="13" align="middle"> Source</a><br>
+An autonomous technical interviewer with an agentic loop, multi-layer rubric evaluation engine, critic layer, and real-time recruiter telemetry dashboard.<br><br>
+<img src="./assets/badges/hireminds-stack.svg" height="24" alt="FastAPI, Python, Groq, React, AsyncIO">
 </td>
 </tr>
+</table>
+
+<table>
 <tr>
-<td valign="top">
-<a href="https://github.com/Usman0226/The-Brain"><img src="./assets/work-hireminds.svg" alt="HireMinds AI - Animated interview with filling score bar" width="100%"></a><br>
-<b><a href="https://github.com/Usman0226/The-Brain">HireMinds AI</a></b> &nbsp; <a href="https://github.com/Usman0226/The-Brain"><img src="./assets/i-link.svg" width="13" height="13" align="middle"></a><br>
-An autonomous interviewer with an agentic loop, a multi-layer evaluation engine, a critic layer and a recruiter dashboard.<br>
-<code>FastAPI</code> <code>React</code> <code>Groq</code>
-</td>
-<td valign="top">
-<a href="https://github.com/Usman0226/LifeLink"><img src="./assets/work-lifelink.svg" alt="LifeLink - Animated emergency dispatch with geolocation route and hospital radar" width="100%"></a><br>
-<b><a href="https://github.com/Usman0226/LifeLink">LifeLink</a></b> &nbsp; <a href="https://github.com/Usman0226/LifeLink"><img src="./assets/i-link.svg" width="13" height="13" align="middle"></a><br>
-<img src="./assets/i-trophy.svg" width="15" height="15" align="middle"> Emergency medical dispatch platform connecting hospitals, ambulances, and patients with real-time geolocation. LifeLink Hackathon Winner.<br>
-<code>React</code> <code>Node.js</code> <code>Socket.io</code> <code>Leaflet</code>
+<td width="100%" valign="top">
+<a href="https://ncc-exam-portal.vercel.app/"><img src="./assets/work-ncc-wide.svg" alt="NCC Exam Portal - Defense examination system with server timer" width="100%"></a><br>
+<b><a href="https://ncc-exam-portal.vercel.app/">NCC Exam Portal</a></b> &nbsp; <a href="https://ncc-exam-portal.vercel.app/"><img src="./assets/i-link.svg" width="13" height="13" align="middle"></a><br>
+Timed examination platform engineered for the NCC Tirupati Unit with admin, officer, and cadet <img src="./assets/i-shield.svg" width="15" height="15" align="middle"> roles. Tenant isolation lives in Prisma middleware, and the server authoritatively enforces when an exam <img src="./assets/i-timer.svg" width="15" height="15" align="middle"> ends, preventing client clock tampering.<br><br>
+<img src="./assets/badges/ncc-stack.svg" height="24" alt="React, Express, PostgreSQL, Prisma">
 </td>
 </tr>
 </table>
@@ -85,7 +93,8 @@ flowchart LR
 
 ## Stack
 
-<img src="./assets/stack.svg" alt="Product: React, Next.js, TypeScript, Tailwind, Framer Motion. Backend and data: Node.js, Express, NestJS, PostgreSQL, MongoDB, Prisma, Redis. AI: Python, FastAPI, LangChain, RAG pipelines, Gemini, Groq. Shipping: Vercel, Azure, Firebase, GitHub Actions." width="100%">
+<img src="./assets/stack.svg" alt="Systems Architecture & Technical Capabilities Matrix" width="100%">
+
 
 ## Activity
 
@@ -95,7 +104,7 @@ Client and event platforms live in private repositories, so this shows only part
 
 ## Contact
 
-Available for freelance contracts, full-stack MVPs, and client projects:
+Available for freelance, full-stack MVPs, and client projects:
 
 <a href="https://www.linkedin.com/in/chandan-usman-gani-163aa9321/"><img src="./assets/btn-linkedin.svg" alt="LinkedIn" height="40"></a>
 <a href="mailto:chandanusmangani@gmail.com"><img src="./assets/btn-email.svg" alt="Email me" height="40"></a>

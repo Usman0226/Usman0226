@@ -187,8 +187,10 @@ def rebuild_all_assets(cfg=None):
         ("Activity Graph", [sys.executable, os.path.join(SCRIPT_DIR, "activity.py")]),
         ("Work Showcase SVGs", [sys.executable, os.path.join(SCRIPT_DIR, "generate_work_svgs.py")]),
         ("Work Composite SVG", [sys.executable, os.path.join(SCRIPT_DIR, "generate_composite_work_svg.py")]),
+        ("Project Badge Strips", [sys.executable, os.path.join(SCRIPT_DIR, "generate_badges.py")]),
+        ("Stack Architecture Matrix", [sys.executable, os.path.join(SCRIPT_DIR, "generate_stack_svg.py")]),
         ("Recognition SVG", [sys.executable, os.path.join(SCRIPT_DIR, "generate_recognition_svg.py")]),
-        ("Status Card", [sys.executable, os.path.join(SCRIPT_DIR, "status.py")]),
+        ("Status Card", [sys.executable, os.path.join(SCRIPT_DIR, "status.py"), "--offline"]),
         ("Asset Verification Suite", [sys.executable, os.path.join(SCRIPT_DIR, "verify_assets.py")]),
     ]
 

@@ -7,18 +7,18 @@
 .line{fill:none;stroke:#161616;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 .hov{fill:#f4f4f4}.outline{fill:none;stroke:#c7c7c7;stroke-width:1}
 .up{fill:#1a9d5a}.ring{fill:none;stroke:#1a9d5a;stroke-width:1.2}.down{fill:#c0392b}
-.blue{fill:#2383e2}.blue-ln{fill:none;stroke:#2383e2;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.blue{fill:#8b5cf6}.blue-ln{fill:none;stroke:#8b5cf6;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .gold{fill:#d97706}.gold-ln{fill:none;stroke:#d97706;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 .tag-bg{fill:#eef6ef}.tag-txt{fill:#1a9d5a;font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;font-size:9.5px;font-weight:700}
-.blue-bg{fill:#e7f3f8}.blue-txt{fill:#1967b2;font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;font-size:9.5px;font-weight:700}
+.blue-bg{fill:#f5f3ff}.blue-txt{fill:#6d28d9;font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;font-size:9.5px;font-weight:700}
 .gold-bg{fill:#fef3c7}.gold-txt{fill:#b45309;font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;font-size:9.5px;font-weight:700}
 @media (prefers-color-scheme:dark){
 .cov{fill:#1b1b1b}.ghost{fill:#222}
 .ink{fill:#f0f0f0}.mut{fill:#9a9a9a}.faint{fill:#4d4d4d}.rule{stroke:#2b2b2b}
 .line{stroke:#f0f0f0}.hov{fill:#1e1e1e}.outline{stroke:#3a3a3a}
 .up{fill:#3fb97a}.ring{stroke:#3fb97a}.down{fill:#e0574a}
-.blue{fill:#529cca}.blue-ln{stroke:#529cca}
-.blue-bg{fill:#182833}.blue-txt{fill:#6cb3e8}
+.blue{fill:#a78bfa}.blue-ln{stroke:#a78bfa}
+.blue-bg{fill:#231c38}.blue-txt{fill:#c4b5fd}
 .gold{fill:#f59e0b}.gold-ln{stroke:#f59e0b}
 .tag-bg{fill:#1a2e22}.tag-txt{fill:#3fb97a}
 .gold-bg{fill:#362615}.gold-txt{fill:#fbbf24}
@@ -32,53 +32,108 @@
   <use href="#gserI400_31" transform="translate(802.00 150.00) scale(0.15000)"/>
 </g>
 
-<!-- Architecture Diagram (Chat -> Worker Queue -> Database) with animated data packets -->
+<!-- Architecture Blueprint: Notion-style End-to-End Cloud Topology -->
 <g class="line">
-  <!-- Incoming Event / Chat Bubble -->
-  <path d="M500 20 H560 Q568 20 568 28 V50 Q568 58 560 58 H524 L512 70 L513 58 H510 Q502 58 502 50 V28 Q502 20 510 20 Z"/>
-  <path d="M512 33 H554 M512 44 H536"/>
+  <!-- 1. Client Browser / Web Terminal Window -->
+  <g transform="translate(456, 18)">
+    <rect x="0" y="0" width="70" height="56" rx="4"/>
+    <line x1="0" y1="14" x2="70" y2="14"/>
+    <circle cx="9" cy="7" r="2" class="up"/>
+    <circle cx="16" cy="7" r="2" fill="#e5e7eb" stroke="none"/>
+    <circle cx="23" cy="7" r="2" fill="#e5e7eb" stroke="none"/>
+    <!-- Code lines inside editor -->
+    <line x1="8" y1="24" x2="36" y2="24" stroke-width="1.2"/>
+    <line x1="8" y1="32" x2="54" y2="32" stroke-width="1.2"/>
+    <line x1="8" y1="40" x2="42" y2="40" stroke-width="1.2"/>
+    <line x1="8" y1="48" x2="22" y2="48" stroke-width="1.2" class="up"/>
+    <rect x="26" y="44" width="4" height="6" class="up">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 
-  <!-- Path 1: Client -> Worker Queue -->
-  <path class="flow" d="M578 40 H624"/>
-  <path d="M616 34 L624 40 L616 46"/>
-
-  <!-- Flowing packet 1 (Client to Queue) -->
-  <circle class="up" cx="578" cy="40" r="2.8">
-    <animate attributeName="cx" values="578;622" dur="1.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1"/>
-    <animate attributeName="opacity" values="0;1;1;0" dur="1.8s" repeatCount="indefinite"/>
+  <!-- Flow 1: Client -> API Gateway -->
+  <path class="flow" d="M530 46 H558"/>
+  <path d="M552 41 L558 46 L552 51"/>
+  <circle class="up" cx="530" cy="46" r="2.5">
+    <animate attributeName="cx" values="530;558" dur="1.6s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="1.6s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- Worker Queue Nodes -->
-  <rect x="632" y="18" width="58" height="16" rx="4">
-    <animate attributeName="stroke" values="#161616;#1a9d5a;#161616" dur="3s" repeatCount="indefinite"/>
-  </rect>
-  <rect x="632" y="38" width="58" height="16" rx="4">
-    <animate attributeName="stroke" values="#161616;#1a9d5a;#161616" dur="3s" begin="1s" repeatCount="indefinite"/>
-  </rect>
-  <rect x="632" y="58" width="58" height="16" rx="4">
-    <animate attributeName="stroke" values="#161616;#1a9d5a;#161616" dur="3s" begin="2s" repeatCount="indefinite"/>
-  </rect>
-  <line x1="640" y1="26" x2="682" y2="26" stroke-dasharray="2 3"/>
-  <line x1="640" y1="46" x2="682" y2="46" stroke-dasharray="2 3"/>
-  <line x1="640" y1="66" x2="682" y2="66" stroke-dasharray="2 3"/>
+  <!-- 2. Edge API Gateway / Router -->
+  <g transform="translate(564, 26)">
+    <polygon points="20,0 40,20 20,40 0,20"/>
+    <circle cx="20" cy="20" r="4" class="up"/>
+    <circle cx="20" cy="20" r="4" class="ring">
+      <animate attributeName="r" values="4;10;10" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
 
-  <!-- Path 2: Queue -> Database -->
-  <path class="flow" d="M698 46 H742"/>
-  <path d="M734 40 L742 46 L734 52"/>
-
-  <!-- Flowing packet 2 (Queue to DB) -->
-  <circle class="up" cx="698" cy="46" r="2.8">
-    <animate attributeName="cx" values="698;740" dur="1.8s" begin="0.9s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1"/>
-    <animate attributeName="opacity" values="0;1;1;0" dur="1.8s" begin="0.9s" repeatCount="indefinite"/>
+  <!-- Flow 2A: Gateway -> Worker Service -->
+  <path class="flow" d="M606 38 H638"/>
+  <path d="M632 33 L638 38 L632 43"/>
+  <circle class="up" cx="606" cy="38" r="2.5">
+    <animate attributeName="cx" values="606;638" dur="1.6s" begin="0.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="1.6s" begin="0.4s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- Database Cylinder -->
-  <path d="M750 30 V62 M806 30 V62 M750 30 A28 8 0 0 1 806 30 A28 8 0 0 1 750 30 M750 62 A28 8 0 0 0 806 62 M750 46 A28 8 0 0 0 806 46"/>
-  <ellipse cx="778" cy="30" rx="14" ry="4" class="ring">
-    <animate attributeName="rx" values="14;24;24" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
-    <animate attributeName="ry" values="4;7;7" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.7;0;0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
-  </ellipse>
+  <!-- Flow 2B: Gateway -> Cache Bus -->
+  <path class="flow" d="M584 66 V74 H638"/>
+  <path d="M632 69 L638 74 L632 79"/>
+
+  <!-- 3. Worker Service Node -->
+  <g transform="translate(642, 18)">
+    <rect x="0" y="0" width="56" height="34" rx="4"/>
+    <line x1="10" y1="10" x2="46" y2="10" stroke-dasharray="2 3"/>
+    <line x1="10" y1="17" x2="46" y2="17" stroke-dasharray="2 3"/>
+    <line x1="10" y1="24" x2="38" y2="24" stroke-dasharray="2 3"/>
+    <circle cx="48" cy="24" r="2" class="up">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- 4. Low-Latency Cache (Redis) -->
+  <g transform="translate(642, 60)">
+    <rect x="0" y="0" width="56" height="26" rx="4"/>
+    <path d="M12 13 H24 M12 18 H20" stroke-width="1.2"/>
+    <!-- Lightning bolt glyph -->
+    <path d="M38 5 L32 14 H37 L34 21 L43 11 H38 L40 5 Z" fill="none" class="up" stroke-width="1.1"/>
+  </g>
+
+  <!-- Flow 3: Worker & Cache -> Database -->
+  <path class="flow" d="M702 35 H742"/>
+  <path d="M736 30 L742 35 L736 40"/>
+  <circle class="up" cx="702" cy="35" r="2.5">
+    <animate attributeName="cx" values="702;742" dur="1.6s" begin="0.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="1.6s" begin="0.8s" repeatCount="indefinite"/>
+  </circle>
+
+  <path class="flow" d="M702 73 H726 V52 H742"/>
+  <path d="M736 47 L742 52 L736 57"/>
+
+  <!-- 5. Distributed Database Cluster (Primary + Replica) -->
+  <g transform="translate(748, 18)">
+    <!-- Primary Cylinder -->
+    <path d="M0 12 V48 M52 12 V48 M0 12 A26 7 0 0 1 52 12 A26 7 0 0 1 0 12 M0 28 A26 7 0 0 0 52 28 M0 48 A26 7 0 0 0 52 48"/>
+    <!-- Replica Cylinder behind -->
+    <path d="M52 24 V58 M74 24 V58 M52 24 A18 5 0 0 1 74 24 M52 40 A18 5 0 0 0 74 40 M52 58 A18 5 0 0 0 74 58" stroke-dasharray="3 3"/>
+    <ellipse cx="26" cy="12" rx="13" ry="3.5" class="ring">
+      <animate attributeName="rx" values="13;22;22" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="3.5;6;6" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0;0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- 6. Real-time Telemetry Broadcast Beacon -->
+  <g transform="translate(840, 36)">
+    <circle cx="0" cy="0" r="3" class="up"/>
+    <path d="M-6 -8 A10 10 0 0 0 -6 8 M6 -8 A10 10 0 0 1 6 8" stroke-width="1.2">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="1.8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M-11 -13 A17 17 0 0 0 -11 13 M11 -13 A17 17 0 0 1 11 13" stroke-width="1.2">
+      <animate attributeName="opacity" values="0.1;0.7;0.1" dur="1.8s" begin="0.4s" repeatCount="indefinite"/>
+    </path>
+  </g>
 </g>
 
 <!-- Divider Rule at y=104 -->

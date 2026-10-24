@@ -1,17 +1,17 @@
 {
-  "theme": "blue",
+  "theme": "violet",
   "colors": {
     "primary": {
-      "light": "#2383e2",
-      "dark": "#529cca"
+      "light": "#8b5cf6",
+      "dark": "#a78bfa"
     },
     "primary_bg": {
-      "light": "#e7f3f8",
-      "dark": "#182833"
+      "light": "#f5f3ff",
+      "dark": "#231c38"
     },
     "primary_txt": {
-      "light": "#1967b2",
-      "dark": "#6cb3e8"
+      "light": "#6d28d9",
+      "dark": "#c4b5fd"
     },
     "accent_green": {
       "light": "#1a9d5a",
@@ -46,8 +46,8 @@
   "activity": {
     "username": "Usman0226",
     "color": {
-      "light": "#2383e2",
-      "dark": "#529cca"
+      "light": "#8b5cf6",
+      "dark": "#a78bfa"
     },
     "fill_opacity": "0.14"
   }

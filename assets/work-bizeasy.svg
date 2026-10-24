@@ -15,6 +15,7 @@
 .txt-red{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:0.5px;fill:#e03e3e}
 .txt-stamp{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:1px;fill:#1a9d5a}
 .txt-mono{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;font-size:10.5px;font-weight:600;fill:#37352f}
+.txt-stat{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;fill:#37352f}
 @media (prefers-color-scheme:dark){
 .ink{fill:#e6e5e3}.mut{fill:#9b9a97}.rule{stroke:#373737}
 .ln{stroke:#e6e5e3}.thin{stroke:#9b9a97}
@@ -24,7 +25,7 @@
 .scan{stroke:#529cca}.blue{fill:#529cca}.blue-ln{stroke:#529cca}
 .green{fill:#3fb97a}.green-ln{stroke:#3fb97a}
 .red{fill:#eb5757}.red-ln{stroke:#eb5757}
-.txt-sm{fill:#9b9a97}.txt-red{fill:#eb5757}.txt-stamp{fill:#3fb97a}.txt-mono{fill:#e6e5e3}
+.txt-sm{fill:#9b9a97}.txt-red{fill:#eb5757}.txt-stamp{fill:#3fb97a}.txt-mono{fill:#e6e5e3}.txt-stat{fill:#e6e5e3}
 }
 </style>
 <defs>

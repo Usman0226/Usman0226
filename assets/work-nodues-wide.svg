@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 200" width="880" height="200" role="img" aria-labelledby="t">
+<title id="t">NoDues clearance: animated checklist and real-time SSE metrics dashboard</title>
+<style>
+.ink{fill:#37352f}.mut{fill:#787774}.rule{stroke:#e9e9e7;stroke-width:1}
+.ln{fill:none;stroke:#37352f;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.thin{stroke-width:1.5;stroke:#787774}
+.bgY{fill:#fbf3db}.bgB{fill:#e7f3f8}.bgP{fill:#f9eef3}.bgG{fill:#edf3ec}.bgO{fill:#fbebe3}.bgN{fill:#f1f1ef}.bgR{fill:#fbebe9}
+.fY{fill:#fdecc8}.fB{fill:#d3e5ef}.fP{fill:#f5e0e9}.fG{fill:#dbeddb}.fO{fill:#fadec9}.fR{fill:#fadbd8}.paper{fill:#ffffff}.solid{fill:#37352f;stroke:none}
+.cb{fill:#d3e5ef}.cg{fill:#dbeddb}.co{fill:#fadec9}.cp{fill:#f5e0e9}.cy{fill:#fdecc8}.hov{fill:#f1f1ef}
+.scan{fill:none;stroke:#2383e2;stroke-width:2.5;stroke-linecap:round}.blue{fill:#2383e2}
+.blue-ln{fill:none;stroke:#2383e2;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.green{fill:#1a9d5a}.green-ln{fill:none;stroke:#1a9d5a;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.red{fill:#e03e3e}.red-ln{fill:none;stroke:#e03e3e;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.txt-sm{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:10px;font-weight:600;fill:#787774}
+.txt-red{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:0.5px;fill:#e03e3e}
+.txt-stamp{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:1px;fill:#1a9d5a}
+.txt-mono{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;font-size:10.5px;font-weight:600;fill:#37352f}
+.txt-stat{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:24px;font-weight:800;fill:#37352f}
+@media (prefers-color-scheme:dark){
+.ink{fill:#e6e5e3}.mut{fill:#9b9a97}.rule{stroke:#373737}
+.ln{stroke:#e6e5e3}.thin{stroke:#9b9a97}
+.bgY{fill:#342f21}.bgB{fill:#1d2a32}.bgP{fill:#30262b}.bgG{fill:#202b24}.bgO{fill:#33271f}.bgN{fill:#262626}.bgR{fill:#342323}
+.fY{fill:#4d4228}.fB{fill:#29414f}.fP{fill:#4a3641}.fG{fill:#2c4638}.fO{fill:#553d29}.fR{fill:#4e2929}.paper{fill:#1f1f1f}.solid{fill:#e6e5e3}
+.cb{fill:#203c4c}.cg{fill:#1f3a2c}.co{fill:#4a3321}.cp{fill:#43303b}.cy{fill:#463c24}.hov{fill:#262626}
+.scan{stroke:#529cca}.blue{fill:#529cca}.blue-ln{stroke:#529cca}
+.green{fill:#3fb97a}.green-ln{stroke:#3fb97a}
+.red{fill:#eb5757}.red-ln{stroke:#eb5757}
+.txt-sm{fill:#9b9a97}.txt-red{fill:#eb5757}.txt-stamp{fill:#3fb97a}.txt-mono{fill:#e6e5e3}.txt-stat{fill:#e6e5e3}
+}
+</style>
+<defs>
+<filter id="wob" x="-5%" y="-8%" width="110%" height="116%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="5" result="n"/>
+  <feDisplacementMap in="SourceGraphic" in2="n" scale="2.2"/>
+</filter>
+</defs>
+<rect class="bgG" width="880" height="200" rx="8"/>
+<g filter="url(#wob)">
+  <!-- Left Half: Animated Checklist Clipboard -->
+  <g transform="translate(45, 12)">
+    <rect class="solid" x="54" y="16" width="220" height="152" rx="10" opacity="0.12"/>
+    <rect class="ln paper" x="50" y="12" width="224" height="156" rx="8"/>
+    <!-- Clip at top -->
+    <rect class="solid" x="128" y="4" width="68" height="18" rx="4" opacity="0.85"/>
+    <rect class="ln paper" x="140" y="8" width="44" height="10" rx="3"/>
+
+    <!-- Row 1: Dept Library -->
+    <rect class="ln" x="72" y="38" width="14" height="14" rx="3"/>
+    <path class="green-ln" d="M75 45 L79 49 L85 41" stroke-dasharray="16" stroke-dashoffset="16">
+      <animate attributeName="stroke-dashoffset" values="16;16;0;0;16" keyTimes="0;0.12;0.22;0.88;0.96" dur="5.5s" repeatCount="indefinite"/>
+    </path>
+    <path class="ln" d="M96 45 H173"/>
+    <path class="ln thin" d="M183 45 H208"/>
+
+    <!-- Row 2: Lab Equipment -->
+    <rect class="ln" x="72" y="62" width="14" height="14" rx="3"/>
+    <path class="green-ln" d="M75 69 L79 73 L85 65" stroke-dasharray="16" stroke-dashoffset="16">
+      <animate attributeName="stroke-dashoffset" values="16;16;0;0;16" keyTimes="0;0.32;0.42;0.88;0.96" dur="5.5s" repeatCount="indefinite"/>
+    </path>
+    <path class="ln" d="M96 69 H193"/>
+    <path class="ln thin" d="M203 69 H228"/>
+
+    <!-- Row 3: Faculty Adviser -->
+    <rect class="ln" x="72" y="86" width="14" height="14" rx="3"/>
+    <path class="green-ln" d="M75 93 L79 97 L85 89" stroke-dasharray="16" stroke-dashoffset="16">
+      <animate attributeName="stroke-dashoffset" values="16;16;0;0;16" keyTimes="0;0.52;0.62;0.88;0.96" dur="5.5s" repeatCount="indefinite"/>
+    </path>
+    <path class="ln" d="M96 93 H163"/>
+    <path class="ln thin" d="M173 93 H218"/>
+
+    <!-- Progress bar -->
+    <rect class="ln paper" x="72" y="118" width="180" height="14" rx="7"/>
+    <rect class="fG" x="74" y="120" width="20" height="10" rx="5">
+      <animate attributeName="width" values="20;70;125;176;176;20" keyTimes="0;0.25;0.45;0.65;0.88;0.98" dur="5.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1"/>
+    </rect>
+
+    <!-- Cleared Stamp -->
+    <g transform="translate(155, 70) rotate(-10)">
+      <g>
+        <rect class="paper" x="-5" y="-14" width="94" height="26" rx="4" stroke="#1a9d5a" stroke-width="2"/>
+        <text class="txt-stamp" x="6" y="3">CLEARED ✓</text>
+        <animateTransform attributeName="transform" type="scale" values="0;0;1.15;1.0;1.0;0" keyTimes="0;0.63;0.70;0.74;0.88;0.95" dur="5.5s" repeatCount="indefinite"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Divider line -->
+  <path class="ln thin" d="M365 20 V180" stroke-dasharray="3 6"/>
+
+  <!-- Right Half: Real-time Telemetry & Architecture Bento Boxes -->
+  <g transform="translate(395, 16)">
+    <!-- Box 1: Scale metric -->
+    <g>
+      <rect class="paper ln" x="0" y="0" width="210" height="70" rx="8"/>
+      <rect class="fG" x="12" y="10" width="86" height="15" rx="3.5"/>
+      <text class="txt-mono" x="18" y="21" style="font-size:8.5px;fill:#1a9d5a;font-weight:700;">● MITS LIVE</text>
+      <text class="txt-stat" x="12" y="55">2,100+</text>
+      <text class="txt-sm" x="108" y="44" style="font-size:10px;">Students<br/>Cleared Dues</text>
+    </g>
+
+    <!-- Box 2: Faculty Sign-offs -->
+    <g transform="translate(225, 0)">
+      <rect class="paper ln" x="0" y="0" width="210" height="70" rx="8"/>
+      <rect class="fB" x="12" y="10" width="96" height="15" rx="3.5"/>
+      <text class="txt-mono" x="18" y="21" style="font-size:8.5px;fill:#2383e2;font-weight:700;">SSE BROADCAST</text>
+      <text class="txt-stat" x="12" y="55">30+</text>
+      <text class="txt-sm" x="72" y="44" style="font-size:10px;">Faculty<br/>Live Approvals</text>
+    </g>
+
+    <!-- Box 3: Data Ingestion & Sync Pipeline (Wide bottom panel) -->
+    <g transform="translate(0, 82)">
+      <rect class="paper ln" x="0" y="0" width="435" height="86" rx="8"/>
+      <!-- Animated pulse light -->
+      <circle class="green" cx="20" cy="22" r="3.5">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle class="green-ln" cx="20" cy="22" r="8" opacity="0.6">
+        <animate attributeName="r" values="3.5;12;12" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0;0" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text class="txt-mono" x="36" y="25" style="font-size:10.5px;font-weight:700;">ZERO-POLLING SSE PIPELINE &amp; EXCEL FUZZY INGESTION</text>
+      <path class="ln thin" d="M14 38 H421"/>
+      <text class="txt-sm" x="14" y="54" style="font-size:9.5px;">• Multi-role authorization state transitions pushed over Server-Sent Events with zero lag</text>
+      <text class="txt-sm" x="14" y="70" style="font-size:9.5px;">• Fuzzy string matching normalizes heterogeneous department faculty rosters &amp; schedules</text>
+    </g>
+  </g>
+</g>
+</svg>
