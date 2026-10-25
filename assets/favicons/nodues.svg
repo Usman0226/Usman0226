@@ -1,18 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <meta name="description" content="NoDues - Academic Clearance Platform for managing student dues, approvals, and batch workflows." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <title>NoDues — ARC Club</title>
-    <script type="module" crossorigin src="/assets/index-D9NCRDPn.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Cmylokvf.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
-</html>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <rect width="24" height="24" rx="6" fill="#10b981"/>
+  <path d="M6 12 L10 16 L18 8" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

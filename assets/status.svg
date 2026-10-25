@@ -1,90 +1,94 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 330" width="880" height="330" role="img" aria-label="Live Systems 3D Cover Flow Telemetry">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="880" height="340" role="img" aria-label="Live Systems 3D Cover Flow Telemetry">
+<defs>
+  <filter id="shadow-elev" x="-15%" y="-15%" width="130%" height="140%">
+    <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="rgba(0,0,0,0.14)"/>
+  </filter>
+</defs>
 <style>
+/* <![CDATA[ */
 .bg { fill: none; }
-.header-lbl { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; font-weight: 700; letter-spacing: 1px; fill: #6b7280; }
-.header-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11px; fill: #9ca3af; }
-.card-shell { fill: #ffffff; stroke: #e5e7eb; stroke-width: 1px; }
-.card-screen { fill: #f9fafb; stroke: #f3f4f6; stroke-width: 1px; }
-.title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 700; fill: #111827; }
-.sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 9.5px; font-weight: 500; fill: #6b7280; }
+.header-lbl { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; font-weight: 700; letter-spacing: 1.2px; fill: #4b5563; }
+.header-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 12px; fill: #9ca3af; }
+.card-shell { fill: #ffffff; stroke: #e5e7eb; stroke-width: 1px; rx: 16px; }
+.card-screen { fill: #f9fafb; stroke: #f3f4f6; stroke-width: 1px; rx: 10px; }
+.title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 15.5px; font-weight: 700; fill: #111827; }
+.sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 500; fill: #6b7280; }
 .stat-tag { fill: #ecfdf5; stroke: #a7f3d0; stroke-width: 1px; }
-.stat-txt { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 8px; font-weight: 700; fill: #059669; }
+.stat-txt { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 9.5px; font-weight: 700; fill: #059669; }
 .up-dot { fill: #10b981; }
 .up-ring { fill: none; stroke: #10b981; stroke-width: 1.2px; }
-.metric-val { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; font-weight: 700; fill: #111827; }
-.metric-lbl { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 8.5px; font-weight: 500; fill: #6b7280; }
-.url-txt { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 8.5px; fill: #9ca3af; }
+.metric-val { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; font-weight: 700; fill: #111827; }
+.metric-lbl { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; font-weight: 500; fill: #6b7280; }
+.url-txt { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px; fill: #9ca3af; }
 .ctrl-btn { fill: #ffffff; stroke: #e5e7eb; stroke-width: 1px; }
 .ctrl-arrow { fill: none; stroke: #6b7280; stroke-width: 1.5px; stroke-linecap: round; stroke-linejoin: round; }
-.dot-inactive { fill: #d1d5db; }
-.dot-active { fill: #10b981; }
 .wave-live { fill: none; stroke: #10b981; stroke-width: 1.4px; stroke-linecap: round; stroke-linejoin: round; }
 .laser { stroke: #3b82f6; stroke-width: 1.5px; }
 
-/* 3D Cover Flow Auto-Changing Carousel Animation */
+/* 3D Cover Flow: Restful 3s per card with buttery cubic-bezier glide */
 @keyframes cf1 {
-  0%, 16%    { transform: translate(345px, 35px) rotate(0deg) scale(1.0); opacity: 1.0; }
-  20%, 36%   { transform: translate(490px, 42px) rotate(7deg) scale(0.86); opacity: 0.75; }
-  40%, 56%   { transform: translate(630px, 54px) rotate(14deg) scale(0.72); opacity: 0.42; }
-  60%, 76%   { transform: translate(60px, 54px) rotate(-14deg) scale(0.72); opacity: 0.42; }
-  80%, 96%   { transform: translate(200px, 42px) rotate(-7deg) scale(0.86); opacity: 0.75; }
-  100%       { transform: translate(345px, 35px) rotate(0deg) scale(1.0); opacity: 1.0; }
+  0%, 15%     { transform: translate(440px, 148px) scale(1.0) rotate(0deg); opacity: 1.0; }
+  20%, 35%    { transform: translate(295px, 154px) scale(0.86) rotate(-5deg); opacity: 0.82; }
+  40%, 55%    { transform: translate(165px, 162px) scale(0.72) rotate(-10deg); opacity: 0.42; }
+  60%, 75%    { transform: translate(715px, 162px) scale(0.72) rotate(10deg); opacity: 0.42; }
+  80%, 95%    { transform: translate(585px, 154px) scale(0.86) rotate(5deg); opacity: 0.82; }
+  100%        { transform: translate(440px, 148px) scale(1.0) rotate(0deg); opacity: 1.0; }
 }
 
 @keyframes cf2 {
-  0%, 16%    { transform: translate(490px, 42px) rotate(7deg) scale(0.86); opacity: 0.75; }
-  20%, 36%   { transform: translate(630px, 54px) rotate(14deg) scale(0.72); opacity: 0.42; }
-  40%, 56%   { transform: translate(60px, 54px) rotate(-14deg) scale(0.72); opacity: 0.42; }
-  60%, 76%   { transform: translate(200px, 42px) rotate(-7deg) scale(0.86); opacity: 0.75; }
-  80%, 96%   { transform: translate(345px, 35px) rotate(0deg) scale(1.0); opacity: 1.0; }
-  100%       { transform: translate(490px, 42px) rotate(7deg) scale(0.86); opacity: 0.75; }
+  0%, 15%     { transform: translate(585px, 154px) scale(0.86) rotate(5deg); opacity: 0.82; }
+  20%, 35%    { transform: translate(440px, 148px) scale(1.0) rotate(0deg); opacity: 1.0; }
+  40%, 55%    { transform: translate(295px, 154px) scale(0.86) rotate(-5deg); opacity: 0.82; }
+  60%, 75%    { transform: translate(165px, 162px) scale(0.72) rotate(-10deg); opacity: 0.42; }
+  80%, 95%    { transform: translate(715px, 162px) scale(0.72) rotate(10deg); opacity: 0.42; }
+  100%        { transform: translate(585px, 154px) scale(0.86) rotate(5deg); opacity: 0.82; }
 }
 
 @keyframes cf3 {
-  0%, 16%    { transform: translate(630px, 54px) rotate(14deg) scale(0.72); opacity: 0.42; }
-  20%, 36%   { transform: translate(60px, 54px) rotate(-14deg) scale(0.72); opacity: 0.42; }
-  40%, 56%   { transform: translate(200px, 42px) rotate(-7deg) scale(0.86); opacity: 0.75; }
-  60%, 76%   { transform: translate(345px, 35px) rotate(0deg) scale(1.0); opacity: 1.0; }
-  80%, 96%   { transform: translate(490px, 42px) rotate(7deg) scale(0.86); opacity: 0.75; }
-  100%       { transform: translate(630px, 54px) rotate(14deg) scale(0.72); opacity: 0.42; }
+  0%, 15%     { transform: translate(715px, 162px) scale(0.72) rotate(10deg); opacity: 0.42; }
+  20%, 35%    { transform: translate(585px, 154px) scale(0.86) rotate(5deg); opacity: 0.82; }
+  40%, 55%    { transform: translate(440px, 148px) scale(1.0) rotate(0deg); opacity: 1.0; }
+  60%, 75%    { transform: translate(295px, 154px) scale(0.86) rotate(-5deg); opacity: 0.82; }
+  80%, 95%    { transform: translate(165px, 162px) scale(0.72) rotate(-10deg); opacity: 0.42; }
+  100%        { transform: translate(715px, 162px) scale(0.72) rotate(10deg); opacity: 0.42; }
 }
 
 @keyframes cf4 {
-  0%, 16%    { transform: translate(60px, 54px) rotate(-14deg) scale(0.72); opacity: 0.42; }
-  20%, 36%   { transform: translate(200px, 42px) rotate(-7deg) scale(0.86); opacity: 0.75; }
-  40%, 56%   { transform: translate(345px, 35px) rotate(0deg) scale(1.0); opacity: 1.0; }
-  60%, 76%   { transform: translate(490px, 42px) rotate(7deg) scale(0.86); opacity: 0.75; }
-  80%, 96%   { transform: translate(630px, 54px) rotate(14deg) scale(0.72); opacity: 0.42; }
-  100%       { transform: translate(60px, 54px) rotate(-14deg) scale(0.72); opacity: 0.42; }
+  0%, 15%     { transform: translate(165px, 162px) scale(0.72) rotate(-10deg); opacity: 0.42; }
+  20%, 35%    { transform: translate(715px, 162px) scale(0.72) rotate(10deg); opacity: 0.42; }
+  40%, 55%    { transform: translate(585px, 154px) scale(0.86) rotate(5deg); opacity: 0.82; }
+  60%, 75%    { transform: translate(440px, 148px) scale(1.0) rotate(0deg); opacity: 1.0; }
+  80%, 95%    { transform: translate(295px, 154px) scale(0.86) rotate(-5deg); opacity: 0.82; }
+  100%        { transform: translate(165px, 162px) scale(0.72) rotate(-10deg); opacity: 0.42; }
 }
 
 @keyframes cf5 {
-  0%, 16%    { transform: translate(200px, 42px) rotate(-7deg) scale(0.86); opacity: 0.75; }
-  20%, 36%   { transform: translate(345px, 35px) rotate(0deg) scale(1.0); opacity: 1.0; }
-  40%, 56%   { transform: translate(490px, 42px) rotate(7deg) scale(0.86); opacity: 0.75; }
-  60%, 76%   { transform: translate(630px, 54px) rotate(14deg) scale(0.72); opacity: 0.42; }
-  80%, 96%   { transform: translate(60px, 54px) rotate(-14deg) scale(0.72); opacity: 0.42; }
-  100%       { transform: translate(200px, 42px) rotate(-7deg) scale(0.86); opacity: 0.75; }
+  0%, 15%     { transform: translate(295px, 154px) scale(0.86) rotate(-5deg); opacity: 0.82; }
+  20%, 35%    { transform: translate(165px, 162px) scale(0.72) rotate(-10deg); opacity: 0.42; }
+  40%, 55%    { transform: translate(715px, 162px) scale(0.72) rotate(10deg); opacity: 0.42; }
+  60%, 75%    { transform: translate(585px, 154px) scale(0.86) rotate(5deg); opacity: 0.82; }
+  80%, 95%    { transform: translate(440px, 148px) scale(1.0) rotate(0deg); opacity: 1.0; }
+  100%        { transform: translate(295px, 154px) scale(0.86) rotate(-5deg); opacity: 0.82; }
 }
 
-.c-pos1 { animation: cf1 15s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
-.c-pos2 { animation: cf2 15s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
-.c-pos3 { animation: cf3 15s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
-.c-pos4 { animation: cf4 15s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
-.c-pos5 { animation: cf5 15s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+.c-pos1 { animation: cf1 15s cubic-bezier(0.25, 1, 0.5, 1) infinite; }
+.c-pos2 { animation: cf2 15s cubic-bezier(0.25, 1, 0.5, 1) infinite; }
+.c-pos3 { animation: cf3 15s cubic-bezier(0.25, 1, 0.5, 1) infinite; }
+.c-pos4 { animation: cf4 15s cubic-bezier(0.25, 1, 0.5, 1) infinite; }
+.c-pos5 { animation: cf5 15s cubic-bezier(0.25, 1, 0.5, 1) infinite; }
 
-/* Indicator Dots sync */
-@keyframes dot1 { 0%, 16%, 100% { fill: #10b981; r: 3.5; } 20%, 96% { fill: #d1d5db; r: 2.5; } }
-@keyframes dot2 { 20%, 36% { fill: #10b981; r: 3.5; } 0%, 16%, 40%, 100% { fill: #d1d5db; r: 2.5; } }
-@keyframes dot3 { 60%, 76% { fill: #10b981; r: 3.5; } 0%, 56%, 80%, 100% { fill: #d1d5db; r: 2.5; } }
-@keyframes dot4 { 80%, 96% { fill: #10b981; r: 3.5; } 0%, 76%, 100% { fill: #d1d5db; r: 2.5; } }
-@keyframes dot5 { 40%, 56% { fill: #10b981; r: 3.5; } 0%, 36%, 60%, 100% { fill: #d1d5db; r: 2.5; } }
+/* Indicator Dots sync with active center card */
+@keyframes d1 { 0%, 15%, 100% { fill: #10b981; r: 3.5; } 20%, 95% { fill: #d1d5db; r: 2.5; } }
+@keyframes d2 { 20%, 35% { fill: #10b981; r: 3.5; } 0%, 15%, 40%, 100% { fill: #d1d5db; r: 2.5; } }
+@keyframes d3 { 40%, 55% { fill: #10b981; r: 3.5; } 0%, 35%, 60%, 100% { fill: #d1d5db; r: 2.5; } }
+@keyframes d4 { 60%, 75% { fill: #10b981; r: 3.5; } 0%, 55%, 80%, 100% { fill: #d1d5db; r: 2.5; } }
+@keyframes d5 { 80%, 95% { fill: #10b981; r: 3.5; } 0%, 75%, 100% { fill: #d1d5db; r: 2.5; } }
 
-.ind-dot1 { animation: dot1 15s infinite; }
-.ind-dot2 { animation: dot5 15s infinite; }
-.ind-dot3 { animation: dot2 15s infinite; }
-.ind-dot4 { animation: dot3 15s infinite; }
-.ind-dot5 { animation: dot4 15s infinite; }
+.ind-dot1 { animation: d1 15s infinite; }
+.ind-dot2 { animation: d2 15s infinite; }
+.ind-dot3 { animation: d3 15s infinite; }
+.ind-dot4 { animation: d4 15s infinite; }
+.ind-dot5 { animation: d5 15s infinite; }
 
 @media (prefers-color-scheme: dark) {
   .header-lbl { fill: #9ca3af; }
@@ -102,12 +106,12 @@
   .url-txt { fill: #6b7280; }
   .ctrl-btn { fill: #18181b; stroke: #27272a; }
   .ctrl-arrow { stroke: #9ca3af; }
-  .dot-inactive { fill: #3f3f46; }
 }
+/* ]]> */
 </style>
 <!-- Header -->
 <g transform="translate(0, 16)">
-  <text class="header-lbl" x="0" y="0">MISSION CONTROL &#8226; LIVE PRODUCTION SYSTEMS TELEMETRY</text>
+  <text class="header-lbl" x="0" y="0">MISSION CONTROL &#8226; PRODUCTION SYSTEMS TELEMETRY</text>
   <text class="header-sub" x="0" y="16">5 continuous systems monitored via synthetic edge probes &#8226; Auto-rotating telemetry</text>
   <g transform="translate(734, -3.5)">
     <circle class="up-dot" cx="0" cy="0" r="3"/>
@@ -120,249 +124,264 @@
 </g>
 
 <!-- 3D Cover Flow Carousel Deck -->
-<g transform="translate(0, 10)">
+<g class="card-deck">
   <g class="c-pos1">
-    <rect class="card-shell" width="190" height="226" rx="14"/>
-    
-    <!-- Header: Favicon + Title + Status Pill -->
-    <g transform="translate(12, 12)">
+    <!-- Drop Shadow Container -->
+    <g filter="url(#shadow-elev)">
+      <rect class="card-shell" x="-90" y="-116" width="180" height="232" rx="16"/>
       
-    <g transform="translate(0, 2)">
-      <rect width="22" height="22" rx="5" fill="#10b981"/>
+      <!-- Top: Favicon + Titles + Status Badge -->
+      <g transform="translate(-76, -102)">
+        
+    <g transform="translate(0, 0)">
+      <rect width="22" height="22" rx="6" fill="#10b981"/>
       <path d="M5 11 L9 15 L17 7" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
     
-      <text class="title" x="28" y="14">NoDues</text>
-      <text class="sub" x="28" y="25">Clearance Engine</text>
-      
-      <!-- Status Tag -->
-      <g transform="translate(106, 2)">
-        <rect class="stat-tag" width="60" height="15" rx="7.5"/>
-        <circle class="up-dot" cx="7" cy="7.5" r="2.2"/>
-        <text class="stat-txt" x="13" y="10.5">ONLINE</text>
+        <text class="title" x="28" y="13">NoDues</text>
+        <text class="sub" x="28" y="24">Clearance Engine</text>
+        
+        <!-- Status Pill -->
+        <g transform="translate(98, 2)">
+          <rect class="stat-tag" width="54" height="15" rx="7.5"/>
+          <circle class="up-dot" cx="7" cy="7.5" r="2.2"/>
+          <text class="stat-txt" x="13" y="10.5">ONLINE</text>
+        </g>
       </g>
-    </g>
-    
-    <!-- Mini Screen Mockup Area -->
-    <g transform="translate(10, 48)">
-      <rect class="card-screen" width="170" height="114" rx="8"/>
       
+      <!-- Mobile / Card Screen Mockup -->
+      <g transform="translate(-80, -66)">
+        <rect class="card-screen" width="160" height="122" rx="10"/>
+        
     <g transform="translate(8, 10)">
-      <rect width="154" height="26" rx="4" fill="rgba(16,185,129,0.08)" stroke="rgba(16,185,129,0.2)"/>
-      <text font-family="ui-monospace, monospace" font-size="8.5" font-weight="700" fill="#10b981" x="8" y="16">CLEARED &#10003; 2,100+ STUDENTS</text>
+      <rect width="144" height="26" rx="5" fill="rgba(16,185,129,0.08)" stroke="rgba(16,185,129,0.2)"/>
+      <text font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#10b981" x="6" y="16">CLEARED &#10003; 2,100+ STUDENTS</text>
       <!-- Progress Bar -->
-      <rect x="0" y="34" width="154" height="6" rx="3" fill="#e5e7eb"/>
-      <rect x="0" y="34" width="138" height="6" rx="3" fill="#10b981">
-        <animate attributeName="width" values="60;138;138" dur="3s" repeatCount="indefinite"/>
+      <rect x="0" y="36" width="144" height="6" rx="3" fill="#e5e7eb"/>
+      <rect x="0" y="36" width="130" height="6" rx="3" fill="#10b981">
+        <animate attributeName="width" values="50;130;130" dur="3s" repeatCount="indefinite"/>
       </rect>
       <!-- Approvals stream -->
-      <text font-family="-apple-system, sans-serif" font-size="8" fill="#6b7280" x="0" y="56">Faculty Approvals: 30+ Live</text>
-      <path class="wave-live" d="M0 76 L25 76 L32 68 L38 84 L44 72 L50 78 L56 76 L154 76"/>
-      <text font-family="ui-monospace, monospace" font-size="7.5" fill="#10b981" x="0" y="94">&#9679; SSE PIPELINE ACTIVE</text>
+      <text font-family="-apple-system, sans-serif" font-size="8" fill="#6b7280" x="0" y="60">Faculty Approvals: 30+ Live</text>
+      <path class="wave-live" d="M0 80 L25 80 L32 72 L38 88 L44 76 L50 82 L56 80 L144 80"/>
+      <text font-family="ui-monospace, monospace" font-size="7.5" fill="#10b981" x="0" y="102">&#9679; SSE STREAM ACTIVE</text>
     </g>
     
-    </g>
-    
-    <!-- Bottom Telemetry & URL -->
-    <g transform="translate(12, 192)">
-      <text class="metric-val" x="0" y="0">284 ms</text>
-      <text class="metric-lbl" x="46" y="-0.5">p95 &#8226; SSE STREAM</text>
-      <text class="url-txt" x="0" y="18">nodues-arcclub.tech</text>
+      </g>
+      
+      <!-- Bottom: Latency & Verified URL -->
+      <g transform="translate(-76, 74)">
+        <text class="metric-val" x="0" y="0">284 ms</text>
+        <text class="metric-lbl" x="46" y="-0.5">p95 &#8226; SSE STREAM</text>
+        <text class="url-txt" x="0" y="18">nodues-arcclub.tech</text>
+      </g>
     </g>
 </g>
   <g class="c-pos2">
-    <rect class="card-shell" width="190" height="226" rx="14"/>
-    
-    <!-- Header: Favicon + Title + Status Pill -->
-    <g transform="translate(12, 12)">
+    <!-- Drop Shadow Container -->
+    <g filter="url(#shadow-elev)">
+      <rect class="card-shell" x="-90" y="-116" width="180" height="232" rx="16"/>
       
-    <g transform="translate(0, 2)">
+      <!-- Top: Favicon + Titles + Status Badge -->
+      <g transform="translate(-76, -102)">
+        
+    <g transform="translate(0, 0)">
       <image href="data:image/png;base64,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" width="22" height="22"/>
     </g>
     
-      <text class="title" x="28" y="14">D&#8217;FESTA</text>
-      <text class="sub" x="28" y="25">Symposium Gate</text>
-      
-      <!-- Status Tag -->
-      <g transform="translate(106, 2)">
-        <rect class="stat-tag" width="60" height="15" rx="7.5"/>
-        <circle class="up-dot" cx="7" cy="7.5" r="2.2"/>
-        <text class="stat-txt" x="13" y="10.5">ONLINE</text>
+        <text class="title" x="28" y="13">D&#8217;FESTA</text>
+        <text class="sub" x="28" y="24">Symposium Gate</text>
+        
+        <!-- Status Pill -->
+        <g transform="translate(98, 2)">
+          <rect class="stat-tag" width="54" height="15" rx="7.5"/>
+          <circle class="up-dot" cx="7" cy="7.5" r="2.2"/>
+          <text class="stat-txt" x="13" y="10.5">ONLINE</text>
+        </g>
       </g>
-    </g>
-    
-    <!-- Mini Screen Mockup Area -->
-    <g transform="translate(10, 48)">
-      <rect class="card-screen" width="170" height="114" rx="8"/>
       
+      <!-- Mobile / Card Screen Mockup -->
+      <g transform="translate(-80, -66)">
+        <rect class="card-screen" width="160" height="122" rx="10"/>
+        
     <g transform="translate(8, 10)">
-      <rect width="154" height="42" rx="5" fill="none" stroke="#6366f1" stroke-dasharray="3 3"/>
-      <text font-family="ui-monospace, monospace" font-size="8.5" font-weight="700" fill="#6366f1" x="8" y="16">TICKET #DF-2026</text>
-      <text font-family="-apple-system, sans-serif" font-size="7.5" fill="#9ca3af" x="8" y="29">AES-256 HMAC VERIFIED</text>
+      <rect width="144" height="40" rx="5" fill="none" stroke="#6366f1" stroke-dasharray="3 3"/>
+      <text font-family="ui-monospace, monospace" font-size="8.5" font-weight="700" fill="#6366f1" x="6" y="15">TICKET #DF-2026</text>
+      <text font-family="-apple-system, sans-serif" font-size="7.5" fill="#9ca3af" x="6" y="28">AES-256 HMAC VERIFIED</text>
       <!-- Laser scan line -->
-      <line class="laser" x1="0" y1="10" x2="154" y2="10">
-        <animate attributeName="y1" values="10;40;10" dur="2.4s" repeatCount="indefinite"/>
-        <animate attributeName="y2" values="10;40;10" dur="2.4s" repeatCount="indefinite"/>
+      <line class="laser" x1="0" y1="10" x2="144" y2="10">
+        <animate attributeName="y1" values="8;36;8" dur="2.4s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="8;36;8" dur="2.4s" repeatCount="indefinite"/>
       </line>
       <g transform="translate(0, 50)">
         <text font-family="-apple-system, sans-serif" font-size="8" fill="#6b7280" x="0" y="10">Gate Pass: Offline Validator</text>
         <text font-family="-apple-system, sans-serif" font-size="8" fill="#6b7280" x="0" y="24">UPI Reconciliation: Instant</text>
-        <text font-family="ui-monospace, monospace" font-size="7.5" fill="#6366f1" x="0" y="42">&#9679; SMTP TRIPLE FAILOVER</text>
+        <text font-family="ui-monospace, monospace" font-size="7.5" fill="#6366f1" x="0" y="44">&#9679; SMTP TRIPLE FAILOVER</text>
       </g>
     </g>
     
-    </g>
-    
-    <!-- Bottom Telemetry & URL -->
-    <g transform="translate(12, 192)">
-      <text class="metric-val" x="0" y="0">118 ms</text>
-      <text class="metric-lbl" x="46" y="-0.5">p95 &#8226; AES GATE</text>
-      <text class="url-txt" x="0" y="18">dfesta.in</text>
+      </g>
+      
+      <!-- Bottom: Latency & Verified URL -->
+      <g transform="translate(-76, 74)">
+        <text class="metric-val" x="0" y="0">118 ms</text>
+        <text class="metric-lbl" x="46" y="-0.5">p95 &#8226; AES GATE</text>
+        <text class="url-txt" x="0" y="18">dfesta.in</text>
+      </g>
     </g>
 </g>
   <g class="c-pos3">
-    <rect class="card-shell" width="190" height="226" rx="14"/>
-    
-    <!-- Header: Favicon + Title + Status Pill -->
-    <g transform="translate(12, 12)">
+    <!-- Drop Shadow Container -->
+    <g filter="url(#shadow-elev)">
+      <rect class="card-shell" x="-90" y="-116" width="180" height="232" rx="16"/>
       
-    <g transform="translate(0, 2)">
+      <!-- Top: Favicon + Titles + Status Badge -->
+      <g transform="translate(-76, -102)">
+        
+    <g transform="translate(0, 0)">
       <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0NiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDQ4IDQ2Ij48cGF0aCBmaWxsPSIjODYzYmZmIiBkPSJNMjUuOTQ2IDQ0LjkzOGMtLjY2NC44NDUtMi4wMjEuMzc1LTIuMDIxLS42OThWMzMuOTM3YTIuMjYgMi4yNiAwIDAgMC0yLjI2Mi0yLjI2MkgxMC4yODdjLS45MiAwLTEuNDU2LTEuMDQtLjkyLTEuNzg4bDcuNDgtMTAuNDcxYzEuMDctMS40OTcgMC0zLjU3OC0xLjg0Mi0zLjU3OEgxLjIzN2MtLjkyIDAtMS40NTYtMS4wNC0uOTItMS43ODhMMTAuMDEzLjQ3NGMuMjE0LS4yOTcuNTU2LS40NzQuOTItLjQ3NGgyOC44OTRjLjkyIDAgMS40NTYgMS4wNC45MiAxLjc4OGwtNy40OCAxMC40NzFjLTEuMDcgMS40OTggMCAzLjU3OSAxLjg0MiAzLjU3OWgxMS4zNzdjLjk0MyAwIDEuNDczIDEuMDg4Ljg5IDEuODNMMjUuOTQ3IDQ0Ljk0eiIgc3R5bGU9ImZpbGw6Izg2M2JmZjtmaWxsOmNvbG9yKGRpc3BsYXktcDMgLjUyNTIgLjIzIDEpO2ZpbGwtb3BhY2l0eToxIi8+PG1hc2sgaWQ9ImEiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0NiIgeD0iMCIgeT0iMCIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSI+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTI1Ljg0MiA0NC45MzhjLS42NjQuODQ0LTIuMDIxLjM3NS0yLjAyMS0uNjk4VjMzLjkzN2EyLjI2IDIuMjYgMCAwIDAtMi4yNjItMi4yNjJIMTAuMTgzYy0uOTIgMC0xLjQ1Ni0xLjA0LS45Mi0xLjc4OGw3LjQ4LTEwLjQ3MWMxLjA3LTEuNDk4IDAtMy41NzktMS44NDItMy41NzlIMS4xMzNjLS45MiAwLTEuNDU2LTEuMDQtLjkyLTEuNzg3TDkuOTEuNDczYy4yMTQtLjI5Ny41NTYtLjQ3NC45Mi0uNDc0aDI4Ljg5NGMuOTIgMCAxLjQ1NiAxLjA0LjkyIDEuNzg4bC03LjQ4IDEwLjQ3MWMtMS4wNyAxLjQ5OCAwIDMuNTc4IDEuODQyIDMuNTc4aDExLjM3N2MuOTQzIDAgMS40NzMgMS4wODguODkgMS44MzJMMjUuODQzIDQ0Ljk0eiIgc3R5bGU9ImZpbGw6IzAwMDtmaWxsLW9wYWNpdHk6MSIvPjwvbWFzaz48ZyBtYXNrPSJ1cmwoI2EpIj48ZyBmaWx0ZXI9InVybCgjYikiPjxlbGxpcHNlIGN4PSI1LjUwOCIgY3k9IjE0LjcwNCIgZmlsbD0iI2VkZTZmZiIgcng9IjUuNTA4IiByeT0iMTQuNzA0IiBzdHlsZT0iZmlsbDojZWRlNmZmO2ZpbGw6Y29sb3IoZGlzcGxheS1wMyAuOTI3NSAuOTAzMyAxKTtmaWxsLW9wYWNpdHk6MSIgdHJhbnNmb3JtPSJtYXRyaXgoLjAwMzI0IDEgMSAtLjAwMzI0IC00LjQ3IDMxLjUxNikiLz48L2c+PGcgZmlsdGVyPSJ1cmwoI2MpIj48ZWxsaXBzZSBjeD0iMTAuMzk5IiBjeT0iMjkuODUxIiBmaWxsPSIjZWRlNmZmIiByeD0iMTAuMzk5IiByeT0iMjkuODUxIiBzdHlsZT0iZmlsbDojZWRlNmZmO2ZpbGw6Y29sb3IoZGlzcGxheS1wMyAuOTI3NSAuOTAzMyAxKTtmaWxsLW9wYWNpdHk6MSIgdHJhbnNmb3JtPSJtYXRyaXgoLjAwMzI0IDEgMSAtLjAwMzI0IC0zOS4zMjggNy44ODMpIi8+PC9nPjxnIGZpbHRlcj0idXJsKCNkKSI+PGVsbGlwc2UgY3g9IjUuNTA4IiBjeT0iMzAuNDg3IiBmaWxsPSIjN2UxNGZmIiByeD0iNS41MDgiIHJ5PSIzMC40ODciIHN0eWxlPSJmaWxsOiM3ZTE0ZmY7ZmlsbDpjb2xvcihkaXNwbGF5LXAzIC40OTIyIC4wNzY3IDEpO2ZpbGwtb3BhY2l0eToxIiB0cmFuc2Zvcm09InJvdGF0ZSg4OS44MTQgLTI1LjkxMyAtMTQuNjM5KXNjYWxlKDEgLTEpIi8+PC9nPjxnIGZpbHRlcj0idXJsKCNlKSI+PGVsbGlwc2UgY3g9IjUuNTA4IiBjeT0iMzAuNTk5IiBmaWxsPSIjN2UxNGZmIiByeD0iNS41MDgiIHJ5PSIzMC41OTkiIHN0eWxlPSJmaWxsOiM3ZTE0ZmY7ZmlsbDpjb2xvcihkaXNwbGF5LXAzIC40OTIyIC4wNzY3IDEpO2ZpbGwtb3BhY2l0eToxIiB0cmFuc2Zvcm09InJvdGF0ZSg4OS44MTQgLTMyLjY0NCAtMy4zMzQpc2NhbGUoMSAtMSkiLz48L2c+PGcgZmlsdGVyPSJ1cmwoI2YpIj48ZWxsaXBzZSBjeD0iNS41MDgiIGN5PSIzMC41OTkiIGZpbGw9IiM3ZTE0ZmYiIHJ4PSI1LjUwOCIgcnk9IjMwLjU5OSIgc3R5bGU9ImZpbGw6IzdlMTRmZjtmaWxsOmNvbG9yKGRpc3BsYXktcDMgLjQ5MjIgLjA3NjcgMSk7ZmlsbC1vcGFjaXR5OjEiIHRyYW5zZm9ybT0ibWF0cml4KC4wMDMyNCAxIDEgLS4wMDMyNCAtMzQuMzQgMzAuNDcpIi8+PC9nPjxnIGZpbHRlcj0idXJsKCNnKSI+PGVsbGlwc2UgY3g9IjE0LjA3MiIgY3k9IjIyLjA3OCIgZmlsbD0iI2VkZTZmZiIgcng9IjE0LjA3MiIgcnk9IjIyLjA3OCIgc3R5bGU9ImZpbGw6I2VkZTZmZjtmaWxsOmNvbG9yKGRpc3BsYXktcDMgLjkyNzUgLjkwMzMgMSk7ZmlsbC1vcGFjaXR5OjEiIHRyYW5zZm9ybT0icm90YXRlKDkzLjM1IDI0LjUwNiA0OC40OTMpc2NhbGUoLTEgMSkiLz48L2c+PGcgZmlsdGVyPSJ1cmwoI2gpIj48ZWxsaXBzZSBjeD0iMy40NyIgY3k9IjIxLjUwMSIgZmlsbD0iIzdlMTRmZiIgcng9IjMuNDciIHJ5PSIyMS41MDEiIHN0eWxlPSJmaWxsOiM3ZTE0ZmY7ZmlsbDpjb2xvcihkaXNwbGF5LXAzIC40OTIyIC4wNzY3IDEpO2ZpbGwtb3BhY2l0eToxIiB0cmFuc2Zvcm09InJvdGF0ZSg4OS4wMDkgMjguNzA4IDQ3LjU5KXNjYWxlKC0xIDEpIi8+PC9nPjxnIGZpbHRlcj0idXJsKCNpKSI+PGVsbGlwc2UgY3g9IjMuNDciIGN5PSIyMS41MDEiIGZpbGw9IiM3ZTE0ZmYiIHJ4PSIzLjQ3IiByeT0iMjEuNTAxIiBzdHlsZT0iZmlsbDojN2UxNGZmO2ZpbGw6Y29sb3IoZGlzcGxheS1wMyAuNDkyMiAuMDc2NyAxKTtmaWxsLW9wYWNpdHk6MSIgdHJhbnNmb3JtPSJyb3RhdGUoODkuMDA5IDI4LjcwOCA0Ny41OSlzY2FsZSgtMSAxKSIvPjwvZz48ZyBmaWx0ZXI9InVybCgjaikiPjxlbGxpcHNlIGN4PSIuMzg3IiBjeT0iOC45NzIiIGZpbGw9IiM3ZTE0ZmYiIHJ4PSI0LjQwNyIgcnk9IjI5LjEwOCIgc3R5bGU9ImZpbGw6IzdlMTRmZjtmaWxsOmNvbG9yKGRpc3BsYXktcDMgLjQ5MjIgLjA3NjcgMSk7ZmlsbC1vcGFjaXR5OjEiIHRyYW5zZm9ybT0icm90YXRlKDM5LjUxIC4zODcgOC45NzIpIi8+PC9nPjxnIGZpbHRlcj0idXJsKCNrKSI+PGVsbGlwc2UgY3g9IjQ3LjUyMyIgY3k9Ii02LjA5MiIgZmlsbD0iIzdlMTRmZiIgcng9IjQuNDA3IiByeT0iMjkuMTA4IiBzdHlsZT0iZmlsbDojN2UxNGZmO2ZpbGw6Y29sb3IoZGlzcGxheS1wMyAuNDkyMiAuMDc2NyAxKTtmaWxsLW9wYWNpdHk6MSIgdHJhbnNmb3JtPSJyb3RhdGUoMzcuODkyIDQ3LjUyMyAtNi4wOTIpIi8+PC9nPjxnIGZpbHRlcj0idXJsKCNsKSI+PGVsbGlwc2UgY3g9IjQxLjQxMiIgY3k9IjYuMzMzIiBmaWxsPSIjNDdiZmZmIiByeD0iNS45NzEiIHJ5PSI5LjY2NSIgc3R5bGU9ImZpbGw6IzQ3YmZmZjtmaWxsOmNvbG9yKGRpc3BsYXktcDMgLjI3OTkgLjc0OCAxKTtmaWxsLW9wYWNpdHk6MSIgdHJhbnNmb3JtPSJyb3RhdGUoMzcuODkyIDQxLjQxMiA2LjMzMykiLz48L2c+PGcgZmlsdGVyPSJ1cmwoI20pIj48ZWxsaXBzZSBjeD0iLTEuODc5IiBjeT0iMzguMzMyIiBmaWxsPSIjN2UxNGZmIiByeD0iNC40MDciIHJ5PSIyOS4xMDgiIHN0eWxlPSJmaWxsOiM3ZTE0ZmY7ZmlsbDpjb2xvcihkaXNwbGF5LXAzIC40OTIyIC4wNzY3IDEpO2ZpbGwtb3BhY2l0eToxIiB0cmFuc2Zvcm09InJvdGF0ZSgzNy44OTIgLTEuODggMzguMzMyKSIvPjwvZz48ZyBmaWx0ZXI9InVybCgjbikiPjxlbGxpcHNlIGN4PSItMS44NzkiIGN5PSIzOC4zMzIiIGZpbGw9IiM3ZTE0ZmYiIHJ4PSI0LjQwNyIgcnk9IjI5LjEwOCIgc3R5bGU9ImZpbGw6IzdlMTRmZjtmaWxsOmNvbG9yKGRpc3BsYXktcDMgLjQ5MjIgLjA3NjcgMSk7ZmlsbC1vcGFjaXR5OjEiIHRyYW5zZm9ybT0icm90YXRlKDM3Ljg5MiAtMS44OCAzOC4zMzIpIi8+PC9nPjxnIGZpbHRlcj0idXJsKCNvKSI+PGVsbGlwc2UgY3g9IjM1LjY1MSIgY3k9IjI5LjkwNyIgZmlsbD0iIzdlMTRmZiIgcng9IjQuNDA3IiByeT0iMjkuMTA4IiBzdHlsZT0iZmlsbDojN2UxNGZmO2ZpbGw6Y29sb3IoZGlzcGxheS1wMyAuNDkyMiAuMDc2NyAxKTtmaWxsLW9wYWNpdHk6MSIgdHJhbnNmb3JtPSJyb3RhdGUoMzcuODkyIDM1LjY1MSAyOS45MDcpIi8+PC9nPjxnIGZpbHRlcj0idXJsKCNwKSI+PGVsbGlwc2UgY3g9IjM4LjQxOCIgY3k9IjMyLjQiIGZpbGw9IiM0N2JmZmYiIHJ4PSI1Ljk3MSIgcnk9IjE1LjI5NyIgc3R5bGU9ImZpbGw6IzQ3YmZmZjtmaWxsOmNvbG9yKGRpc3BsYXktcDMgLjI3OTkgLjc0OCAxKTtmaWxsLW9wYWNpdHk6MSIgdHJhbnNmb3JtPSJyb3RhdGUoMzcuODkyIDM4LjQxOCAzMi40KSIvPjwvZz48L2c+PGRlZnM+PGZpbHRlciBpZD0iYiIgd2lkdGg9IjYwLjA0NSIgaGVpZ2h0PSI0MS42NTQiIHg9Ii0xOS43NyIgeT0iMTYuMTQ5IiBjb2xvci1pbnRlcnBvbGF0aW9uLWZpbHRlcnM9InNSR0IiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz48ZmVCbGVuZCBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0ic2hhcGUiLz48ZmVHYXVzc2lhbkJsdXIgcmVzdWx0PSJlZmZlY3QxX2ZvcmVncm91bmRCbHVyXzIwMDJfMTcxNTgiIHN0ZERldmlhdGlvbj0iNy42NTkiLz48L2ZpbHRlcj48ZmlsdGVyIGlkPSJjIiB3aWR0aD0iOTAuMzQiIGhlaWdodD0iNTEuNDM3IiB4PSItNTQuNjEzIiB5PSItNy41MzMiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48ZmVGbG9vZCBmbG9vZC1vcGFjaXR5PSIwIiByZXN1bHQ9IkJhY2tncm91bmRJbWFnZUZpeCIvPjxmZUJsZW5kIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9IkJhY2tncm91bmRJbWFnZUZpeCIgcmVzdWx0PSJzaGFwZSIvPjxmZUdhdXNzaWFuQmx1ciByZXN1bHQ9ImVmZmVjdDFfZm9yZWdyb3VuZEJsdXJfMjAwMl8xNzE1OCIgc3RkRGV2aWF0aW9uPSI3LjY1OSIvPjwvZmlsdGVyPjxmaWx0ZXIgaWQ9ImQiIHdpZHRoPSI3OS4zNTUiIGhlaWdodD0iMjkuNCIgeD0iLTQ5LjY0IiB5PSIyLjAzIiBjb2xvci1pbnRlcnBvbGF0aW9uLWZpbHRlcnM9InNSR0IiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz48ZmVCbGVuZCBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0ic2hhcGUiLz48ZmVHYXVzc2lhbkJsdXIgcmVzdWx0PSJlZmZlY3QxX2ZvcmVncm91bmRCbHVyXzIwMDJfMTcxNTgiIHN0ZERldmlhdGlvbj0iNC41OTYiLz48L2ZpbHRlcj48ZmlsdGVyIGlkPSJlIiB3aWR0aD0iNzkuNTc5IiBoZWlnaHQ9IjI5LjQiIHg9Ii00NS4wNDUiIHk9IjIwLjAyOSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJzUkdCIiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiPjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+PGZlQmxlbmQgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+PGZlR2F1c3NpYW5CbHVyIHJlc3VsdD0iZWZmZWN0MV9mb3JlZ3JvdW5kQmx1cl8yMDAyXzE3MTU4IiBzdGREZXZpYXRpb249IjQuNTk2Ii8+PC9maWx0ZXI+PGZpbHRlciBpZD0iZiIgd2lkdGg9Ijc5LjU3OSIgaGVpZ2h0PSIyOS40IiB4PSItNDMuNTEzIiB5PSIyMS4xNzgiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48ZmVGbG9vZCBmbG9vZC1vcGFjaXR5PSIwIiByZXN1bHQ9IkJhY2tncm91bmRJbWFnZUZpeCIvPjxmZUJsZW5kIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9IkJhY2tncm91bmRJbWFnZUZpeCIgcmVzdWx0PSJzaGFwZSIvPjxmZUdhdXNzaWFuQmx1ciByZXN1bHQ9ImVmZmVjdDFfZm9yZWdyb3VuZEJsdXJfMjAwMl8xNzE1OCIgc3RkRGV2aWF0aW9uPSI0LjU5NiIvPjwvZmlsdGVyPjxmaWx0ZXIgaWQ9ImciIHdpZHRoPSI3NC43NDkiIGhlaWdodD0iNTguODUyIiB4PSIxNS43NTYiIHk9Ii0xNy45MDEiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48ZmVGbG9vZCBmbG9vZC1vcGFjaXR5PSIwIiByZXN1bHQ9IkJhY2tncm91bmRJbWFnZUZpeCIvPjxmZUJsZW5kIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9IkJhY2tncm91bmRJbWFnZUZpeCIgcmVzdWx0PSJzaGFwZSIvPjxmZUdhdXNzaWFuQmx1ciByZXN1bHQ9ImVmZmVjdDFfZm9yZWdyb3VuZEJsdXJfMjAwMl8xNzE1OCIgc3RkRGV2aWF0aW9uPSI3LjY1OSIvPjwvZmlsdGVyPjxmaWx0ZXIgaWQ9ImgiIHdpZHRoPSI2MS4zNzciIGhlaWdodD0iMjUuMzYyIiB4PSIyMy41NDgiIHk9IjIuMjg0IiBjb2xvci1pbnRlcnBvbGF0aW9uLWZpbHRlcnM9InNSR0IiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz48ZmVCbGVuZCBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0ic2hhcGUiLz48ZmVHYXVzc2lhbkJsdXIgcmVzdWx0PSJlZmZlY3QxX2ZvcmVncm91bmRCbHVyXzIwMDJfMTcxNTgiIHN0ZERldmlhdGlvbj0iNC41OTYiLz48L2ZpbHRlcj48ZmlsdGVyIGlkPSJpIiB3aWR0aD0iNjEuMzc3IiBoZWlnaHQ9IjI1LjM2MiIgeD0iMjMuNTQ4IiB5PSIyLjI4NCIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJzUkdCIiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiPjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+PGZlQmxlbmQgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+PGZlR2F1c3NpYW5CbHVyIHJlc3VsdD0iZWZmZWN0MV9mb3JlZ3JvdW5kQmx1cl8yMDAyXzE3MTU4IiBzdGREZXZpYXRpb249IjQuNTk2Ii8+PC9maWx0ZXI+PGZpbHRlciBpZD0iaiIgd2lkdGg9IjU2LjA0NSIgaGVpZ2h0PSI2My42NDkiIHg9Ii0yNy42MzYiIHk9Ii0yMi44NTMiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48ZmVGbG9vZCBmbG9vZC1vcGFjaXR5PSIwIiByZXN1bHQ9IkJhY2tncm91bmRJbWFnZUZpeCIvPjxmZUJsZW5kIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9IkJhY2tncm91bmRJbWFnZUZpeCIgcmVzdWx0PSJzaGFwZSIvPjxmZUdhdXNzaWFuQmx1ciByZXN1bHQ9ImVmZmVjdDFfZm9yZWdyb3VuZEJsdXJfMjAwMl8xNzE1OCIgc3RkRGV2aWF0aW9uPSI0LjU5NiIvPjwvZmlsdGVyPjxmaWx0ZXIgaWQ9ImsiIHdpZHRoPSI1NC44MTQiIGhlaWdodD0iNjQuNjQ2IiB4PSIyMC4xMTYiIHk9Ii0zOC40MTUiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48ZmVGbG9vZCBmbG9vZC1vcGFjaXR5PSIwIiByZXN1bHQ9IkJhY2tncm91bmRJbWFnZUZpeCIvPjxmZUJsZW5kIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9IkJhY2tncm91bmRJbWFnZUZpeCIgcmVzdWx0PSJzaGFwZSIvPjxmZUdhdXNzaWFuQmx1ciByZXN1bHQ9ImVmZmVjdDFfZm9yZWdyb3VuZEJsdXJfMjAwMl8xNzE1OCIgc3RkRGV2aWF0aW9uPSI0LjU5NiIvPjwvZmlsdGVyPjxmaWx0ZXIgaWQ9ImwiIHdpZHRoPSIzMy41NDEiIGhlaWdodD0iMzUuMzEzIiB4PSIyNC42NDEiIHk9Ii0xMS4zMjMiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48ZmVGbG9vZCBmbG9vZC1vcGFjaXR5PSIwIiByZXN1bHQ9IkJhY2tncm91bmRJbWFnZUZpeCIvPjxmZUJsZW5kIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9IkJhY2tncm91bmRJbWFnZUZpeCIgcmVzdWx0PSJzaGFwZSIvPjxmZUdhdXNzaWFuQmx1ciByZXN1bHQ9ImVmZmVjdDFfZm9yZWdyb3VuZEJsdXJfMjAwMl8xNzE1OCIgc3RkRGV2aWF0aW9uPSI0LjU5NiIvPjwvZmlsdGVyPjxmaWx0ZXIgaWQ9Im0iIHdpZHRoPSI1NC44MTQiIGhlaWdodD0iNjQuNjQ2IiB4PSItMjkuMjg2IiB5PSI2LjAwOSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJzUkdCIiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiPjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+PGZlQmxlbmQgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+PGZlR2F1c3NpYW5CbHVyIHJlc3VsdD0iZWZmZWN0MV9mb3JlZ3JvdW5kQmx1cl8yMDAyXzE3MTU4IiBzdGREZXZpYXRpb249IjQuNTk2Ii8+PC9maWx0ZXI+PGZpbHRlciBpZD0ibiIgd2lkdGg9IjU0LjgxNCIgaGVpZ2h0PSI2NC42NDYiIHg9Ii0yOS4yODYiIHk9IjYuMDA5IiBjb2xvci1pbnRlcnBvbGF0aW9uLWZpbHRlcnM9InNSR0IiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz48ZmVCbGVuZCBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0ic2hhcGUiLz48ZmVHYXVzc2lhbkJsdXIgcmVzdWx0PSJlZmZlY3QxX2ZvcmVncm91bmRCbHVyXzIwMDJfMTcxNTgiIHN0ZERldmlhdGlvbj0iNC41OTYiLz48L2ZpbHRlcj48ZmlsdGVyIGlkPSJvIiB3aWR0aD0iNTQuODE0IiBoZWlnaHQ9IjY0LjY0NiIgeD0iOC4yNDQiIHk9Ii0yLjQxNiIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJzUkdCIiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiPjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+PGZlQmxlbmQgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+PGZlR2F1c3NpYW5CbHVyIHJlc3VsdD0iZWZmZWN0MV9mb3JlZ3JvdW5kQmx1cl8yMDAyXzE3MTU4IiBzdGREZXZpYXRpb249IjQuNTk2Ii8+PC9maWx0ZXI+PGZpbHRlciBpZD0icCIgd2lkdGg9IjM5LjQwOSIgaGVpZ2h0PSI0My42MjMiIHg9IjE4LjcxMyIgeT0iMTAuNTg4IiBjb2xvci1pbnRlcnBvbGF0aW9uLWZpbHRlcnM9InNSR0IiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz48ZmVCbGVuZCBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJCYWNrZ3JvdW5kSW1hZ2VGaXgiIHJlc3VsdD0ic2hhcGUiLz48ZmVHYXVzc2lhbkJsdXIgcmVzdWx0PSJlZmZlY3QxX2ZvcmVncm91bmRCbHVyXzIwMDJfMTcxNTgiIHN0ZERldmlhdGlvbj0iNC41OTYiLz48L2ZpbHRlcj48L2RlZnM+PC9zdmc+" width="22" height="22"/>
     </g>
     
-      <text class="title" x="28" y="14">NCC Exam</text>
-      <text class="sub" x="28" y="25">Defense Platform</text>
-      
-      <!-- Status Tag -->
-      <g transform="translate(106, 2)">
-        <rect class="stat-tag" width="60" height="15" rx="7.5"/>
-        <circle class="up-dot" cx="7" cy="7.5" r="2.2"/>
-        <text class="stat-txt" x="13" y="10.5">ONLINE</text>
+        <text class="title" x="28" y="13">NCC Exam</text>
+        <text class="sub" x="28" y="24">Defense Platform</text>
+        
+        <!-- Status Pill -->
+        <g transform="translate(98, 2)">
+          <rect class="stat-tag" width="54" height="15" rx="7.5"/>
+          <circle class="up-dot" cx="7" cy="7.5" r="2.2"/>
+          <text class="stat-txt" x="13" y="10.5">ONLINE</text>
+        </g>
       </g>
-    </g>
-    
-    <!-- Mini Screen Mockup Area -->
-    <g transform="translate(10, 48)">
-      <rect class="card-screen" width="170" height="114" rx="8"/>
       
+      <!-- Mobile / Card Screen Mockup -->
+      <g transform="translate(-80, -66)">
+        <rect class="card-screen" width="160" height="122" rx="10"/>
+        
     <g transform="translate(8, 10)">
-      <rect width="154" height="30" rx="4" fill="rgba(134,59,255,0.08)" stroke="rgba(134,59,255,0.2)"/>
-      <text font-family="ui-monospace, monospace" font-size="12" font-weight="700" fill="#863bff" x="36" y="20">44 : 59 : 02</text>
+      <rect width="144" height="28" rx="5" fill="rgba(134,59,255,0.08)" stroke="rgba(134,59,255,0.2)"/>
+      <text font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="#863bff" x="30" y="19">44 : 59 : 02</text>
       <text font-family="-apple-system, sans-serif" font-size="7.5" fill="#6b7280" x="0" y="48">Cadet Role: Strict RBAC</text>
       <text font-family="-apple-system, sans-serif" font-size="7.5" fill="#6b7280" x="0" y="62">Server-Authoritative Clock</text>
-      <path class="wave-live" stroke="#863bff" d="M0 76 L30 76 L36 68 L42 84 L48 72 L54 78 L60 76 L154 76"/>
-      <text font-family="ui-monospace, monospace" font-size="7.5" fill="#863bff" x="0" y="94">&#9679; PRISMA TENANT ISOLATION</text>
+      <path class="wave-live" stroke="#863bff" d="M0 78 L30 78 L36 70 L42 86 L48 74 L54 80 L60 78 L144 78"/>
+      <text font-family="ui-monospace, monospace" font-size="7.5" fill="#863bff" x="0" y="100">&#9679; PRISMA RBAC SCOPE</text>
     </g>
     
-    </g>
-    
-    <!-- Bottom Telemetry & URL -->
-    <g transform="translate(12, 192)">
-      <text class="metric-val" x="0" y="0">196 ms</text>
-      <text class="metric-lbl" x="46" y="-0.5">p95 &#8226; PRISMA RBAC</text>
-      <text class="url-txt" x="0" y="18">ncc-exam-portal.vercel.app</text>
+      </g>
+      
+      <!-- Bottom: Latency & Verified URL -->
+      <g transform="translate(-76, 74)">
+        <text class="metric-val" x="0" y="0">196 ms</text>
+        <text class="metric-lbl" x="46" y="-0.5">p95 &#8226; PRISMA RBAC</text>
+        <text class="url-txt" x="0" y="18">ncc-exam-portal.vercel.app</text>
+      </g>
     </g>
 </g>
   <g class="c-pos4">
-    <rect class="card-shell" width="190" height="226" rx="14"/>
-    
-    <!-- Header: Favicon + Title + Status Pill -->
-    <g transform="translate(12, 12)">
+    <!-- Drop Shadow Container -->
+    <g filter="url(#shadow-elev)">
+      <rect class="card-shell" x="-90" y="-116" width="180" height="232" rx="16"/>
       
-    <g transform="translate(0, 2)">
-      <rect width="22" height="22" rx="5" fill="#ef4444"/>
+      <!-- Top: Favicon + Titles + Status Badge -->
+      <g transform="translate(-76, -102)">
+        
+    <g transform="translate(0, 0)">
+      <rect width="22" height="22" rx="6" fill="#ef4444"/>
       <path d="M11 6 V16 M6 11 H16" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
     </g>
     
-      <text class="title" x="28" y="14">LifeLink SOS</text>
-      <text class="sub" x="28" y="25">Medical Dispatch</text>
-      
-      <!-- Status Tag -->
-      <g transform="translate(106, 2)">
-        <rect class="stat-tag" width="60" height="15" rx="7.5"/>
-        <circle class="up-dot" cx="7" cy="7.5" r="2.2"/>
-        <text class="stat-txt" x="13" y="10.5">ONLINE</text>
+        <text class="title" x="28" y="13">LifeLink SOS</text>
+        <text class="sub" x="28" y="24">Medical Dispatch</text>
+        
+        <!-- Status Pill -->
+        <g transform="translate(98, 2)">
+          <rect class="stat-tag" width="54" height="15" rx="7.5"/>
+          <circle class="up-dot" cx="7" cy="7.5" r="2.2"/>
+          <text class="stat-txt" x="13" y="10.5">ONLINE</text>
+        </g>
       </g>
-    </g>
-    
-    <!-- Mini Screen Mockup Area -->
-    <g transform="translate(10, 48)">
-      <rect class="card-screen" width="170" height="114" rx="8"/>
       
+      <!-- Mobile / Card Screen Mockup -->
+      <g transform="translate(-80, -66)">
+        <rect class="card-screen" width="160" height="122" rx="10"/>
+        
     <g transform="translate(8, 10)">
-      <rect width="154" height="28" rx="4" fill="rgba(239,68,68,0.08)" stroke="rgba(239,68,68,0.2)"/>
-      <text font-family="ui-monospace, monospace" font-size="8.5" font-weight="700" fill="#ef4444" x="8" y="17">&#9679; SOS DISPATCH #094</text>
+      <rect width="144" height="28" rx="5" fill="rgba(239,68,68,0.08)" stroke="rgba(239,68,68,0.2)"/>
+      <text font-family="ui-monospace, monospace" font-size="8" font-weight="700" fill="#ef4444" x="6" y="17">&#9679; SOS DISPATCH #094</text>
       <!-- Radar grid path -->
-      <path d="M10 48 H144 M10 70 H144" stroke="#e5e7eb" stroke-dasharray="2 3"/>
-      <path d="M10 70 L45 70 L65 48 L144 48" fill="none" stroke="#ef4444" stroke-width="1.8"/>
+      <path d="M10 48 H134 M10 72 H134" stroke="#e5e7eb" stroke-dasharray="2 3"/>
+      <path d="M10 72 L45 72 L65 48 L134 48" fill="none" stroke="#ef4444" stroke-width="1.8"/>
       <circle cx="65" cy="48" r="4" fill="#ef4444"/>
-      <text font-family="-apple-system, sans-serif" font-size="7.5" fill="#6b7280" x="0" y="86">Ambulance ETA: 3 Min</text>
-      <text font-family="ui-monospace, monospace" font-size="7.5" fill="#ef4444" x="0" y="98">&#9679; WEBSOCKET RADAR ACTIVE</text>
+      <text font-family="-apple-system, sans-serif" font-size="7.5" fill="#6b7280" x="0" y="88">Ambulance ETA: 3 Min</text>
+      <text font-family="ui-monospace, monospace" font-size="7.5" fill="#ef4444" x="0" y="102">&#9679; WEBSOCKET RADAR ACTIVE</text>
     </g>
     
-    </g>
-    
-    <!-- Bottom Telemetry & URL -->
-    <g transform="translate(12, 192)">
-      <text class="metric-val" x="0" y="0">92 ms</text>
-      <text class="metric-lbl" x="46" y="-0.5">p95 &#8226; 1ST WINNER</text>
-      <text class="url-txt" x="0" y="18">lifelink-triage.mesh</text>
+      </g>
+      
+      <!-- Bottom: Latency & Verified URL -->
+      <g transform="translate(-76, 74)">
+        <text class="metric-val" x="0" y="0">92 ms</text>
+        <text class="metric-lbl" x="46" y="-0.5">p95 &#8226; 1ST WINNER</text>
+        <text class="url-txt" x="0" y="18">lifelink-triage.mesh</text>
+      </g>
     </g>
 </g>
   <g class="c-pos5">
-    <rect class="card-shell" width="190" height="226" rx="14"/>
-    
-    <!-- Header: Favicon + Title + Status Pill -->
-    <g transform="translate(12, 12)">
+    <!-- Drop Shadow Container -->
+    <g filter="url(#shadow-elev)">
+      <rect class="card-shell" x="-90" y="-116" width="180" height="232" rx="16"/>
       
-    <g transform="translate(0, 2)">
-      <rect width="22" height="22" rx="5" fill="#22c55e"/>
+      <!-- Top: Favicon + Titles + Status Badge -->
+      <g transform="translate(-76, -102)">
+        
+    <g transform="translate(0, 0)">
+      <rect width="22" height="22" rx="6" fill="#22c55e"/>
       <path d="M6 16 L6 7 Q6 5 8 5 H14 Q16 5 16 7 V13 Q16 15 14 15 H9 Z" fill="none" stroke="#ffffff" stroke-width="1.5"/>
     </g>
     
-      <text class="title" x="28" y="14">BizEasy</text>
-      <text class="sub" x="28" y="25">WhatsApp Engine</text>
-      
-      <!-- Status Tag -->
-      <g transform="translate(106, 2)">
-        <rect class="stat-tag" width="60" height="15" rx="7.5"/>
-        <circle class="up-dot" cx="7" cy="7.5" r="2.2"/>
-        <text class="stat-txt" x="13" y="10.5">ONLINE</text>
+        <text class="title" x="28" y="13">BizEasy</text>
+        <text class="sub" x="28" y="24">WhatsApp Engine</text>
+        
+        <!-- Status Pill -->
+        <g transform="translate(98, 2)">
+          <rect class="stat-tag" width="54" height="15" rx="7.5"/>
+          <circle class="up-dot" cx="7" cy="7.5" r="2.2"/>
+          <text class="stat-txt" x="13" y="10.5">ONLINE</text>
+        </g>
       </g>
-    </g>
-    
-    <!-- Mini Screen Mockup Area -->
-    <g transform="translate(10, 48)">
-      <rect class="card-screen" width="170" height="114" rx="8"/>
       
+      <!-- Mobile / Card Screen Mockup -->
+      <g transform="translate(-80, -66)">
+        <rect class="card-screen" width="160" height="122" rx="10"/>
+        
     <g transform="translate(8, 10)">
-      <rect width="154" height="32" rx="4" fill="rgba(34,197,94,0.08)" stroke="rgba(34,197,94,0.2)"/>
-      <text font-family="-apple-system, sans-serif" font-size="8.5" font-weight="600" fill="#22c55e" x="8" y="15">WhatsApp Order Flow</text>
-      <text font-family="ui-monospace, monospace" font-size="7.5" fill="#6b7280" x="8" y="26">Razorpay UPI &#183; Reconciled</text>
+      <rect width="144" height="30" rx="5" fill="rgba(34,197,94,0.08)" stroke="rgba(34,197,94,0.2)"/>
+      <text font-family="-apple-system, sans-serif" font-size="8" font-weight="600" fill="#22c55e" x="6" y="14">WhatsApp Order Flow</text>
+      <text font-family="ui-monospace, monospace" font-size="7.5" fill="#6b7280" x="6" y="25">Razorpay UPI &#183; Reconciled</text>
       <g transform="translate(0, 42)">
         <text font-family="-apple-system, sans-serif" font-size="8" fill="#6b7280" x="0" y="10">State Machine: Per-Seller Bot</text>
         <text font-family="-apple-system, sans-serif" font-size="8" fill="#6b7280" x="0" y="24">Multi-Tenant Store Engine</text>
-        <text font-family="ui-monospace, monospace" font-size="7.5" fill="#22c55e" x="0" y="44">&#9679; META CLOUD WEBHOOK BUS</text>
+        <text font-family="ui-monospace, monospace" font-size="7.5" fill="#22c55e" x="0" y="46">&#9679; META CLOUD WEBHOOK BUS</text>
       </g>
     </g>
     
-    </g>
-    
-    <!-- Bottom Telemetry & URL -->
-    <g transform="translate(12, 192)">
-      <text class="metric-val" x="0" y="0">145 ms</text>
-      <text class="metric-lbl" x="46" y="-0.5">p95 &#8226; META CLOUD</text>
-      <text class="url-txt" x="0" y="18">bizeasy-commerce.api</text>
+      </g>
+      
+      <!-- Bottom: Latency & Verified URL -->
+      <g transform="translate(-76, 74)">
+        <text class="metric-val" x="0" y="0">145 ms</text>
+        <text class="metric-lbl" x="46" y="-0.5">p95 &#8226; META CLOUD</text>
+        <text class="url-txt" x="0" y="18">bizeasy-commerce.api</text>
+      </g>
     </g>
 </g>
 </g>
 
 <!-- Pagination & Navigation Controls (Ref: Image 3) -->
-<g transform="translate(440.0, 314)">
+<g transform="translate(440.0, 312)">
   <!-- Left Chevron Button -->
-  <g transform="translate(-68, 0)">
+  <g transform="translate(-64, 0)">
     <circle class="ctrl-btn" cx="0" cy="0" r="10"/>
-    <path class="ctrl-arrow" d="M2 -4 L-2 0 L2 4"/>
+    <path class="ctrl-arrow" d="M1.5 -3.5 L-1.5 0 L1.5 3.5"/>
   </g>
   
   <!-- 5 Indicator Dots -->
@@ -373,9 +392,9 @@
   <circle class="ind-dot5" cx="32" cy="0" r="2.8"/>
   
   <!-- Right Chevron Button -->
-  <g transform="translate(68, 0)">
+  <g transform="translate(64, 0)">
     <circle class="ctrl-btn" cx="0" cy="0" r="10"/>
-    <path class="ctrl-arrow" d="M-2 -4 L2 0 L-2 4"/>
+    <path class="ctrl-arrow" d="M-1.5 -3.5 L1.5 0 L-1.5 3.5"/>
   </g>
 </g>
 </svg>

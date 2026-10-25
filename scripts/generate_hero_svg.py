@@ -7,9 +7,10 @@ Includes perpetual micro-interactions on the 3 metrics and architecture pipeline
 import os
 import sys
 import json
+import html
 
 sys.path.insert(0, os.path.dirname(__file__))
-from typeset import Text
+from typeset import Text, GLYPHS
 
 T = Text()
 W, H = 880, 458
@@ -54,7 +55,7 @@ CSS = f"""<style>
 </style>"""
 
 hero_cfg = config.get("hero", {})
-name_text = hero_cfg.get("name", "Usman")
+name_text = hero_cfg.get("name", "Hi, I'm Usman")
 status_text = hero_cfg.get("status", "Available for freelance & contracts")
 bio1_text = hero_cfg.get("bio1", "Full-stack and AI engineer building real-time web applications and backend systems.")
 bio2_text = hero_cfg.get("bio2", "Focused on reliable architecture, clean interfaces, and shipping for clients and teams.")
@@ -64,7 +65,17 @@ m2 = hero_cfg.get("metric2", {"val": "4", "l1": "production platforms live", "l2
 m3 = hero_cfg.get("metric3", {"val": "10+", "l1": "tools, APIs & motion libraries", "l2": "React motion, OCR benchmarks & agents"})
 
 # Pre-render text lines using typeset
-name_el = T.put(name_text, "sans600", 68, -2, 206, "ink")
+font_size = 56 if len(name_text) > 8 else 68
+name_el = T.put(name_text, "sans600", font_size, -2, 206, "ink")
+
+# Calculate cursor coordinates right after the headline
+g = GLYPHS['sans600']
+scale = font_size / 1000.0
+headline_w = sum(g.get(c, [500])[0] * scale for c in name_text if c in g)
+cursor_x = int(-2 + headline_w) + 6
+cursor_h = int(font_size * 0.62)
+cursor_y = 206 - cursor_h - 4
+
 intern_el = T.put(status_text, "sans400", 16.5, 520, 186, "mut")
 
 bio1_el = T.put(bio1_text, "sans400", 19.5, 0, 254, "ink")
@@ -82,18 +93,20 @@ stat3_num = T.put(m3["val"], "sans600", 34, 599, 394, "ink")
 stat3_l1 = T.put(m3["l1"], "sans400", 14.5, 600, 419, "mut")
 stat3_l2 = T.put(m3["l2"], "sans400", 14.5, 600, 440, "mut")
 
-# Ghost number "01" at top
-ghost_01 = f"""<g class="ghost">
-  <use href="#gserI400_30" transform="translate(730.00 150.00) scale(0.15000)"/>
-  <use href="#gserI400_31" transform="translate(802.00 150.00) scale(0.15000)"/>
-</g>"""
+# Ghost number "01" at top right
+ghost_01 = T.put("01", "serI400", 140, 710, 206, "ghost")
 
 # Defs of glyphs
 defs_content = T.defs()
 
+# XML escaped text for title and desc metadata
+title_esc = html.escape(f"{name_text} — Full-stack & AI Engineer")
+desc_raw = f"{name_text}. {bio1_text} {status_text}. {m1['val']} {m1['l1']} {m1['l2']}. {m2['val']} {m2['l1']}. {m3['val']} {m3['l1']}."
+desc_esc = html.escape(desc_raw)
+
 svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-labelledby="t d">
-<title id="t">Usman</title>
-<desc id="d">Full-stack and AI engineer building real-time web applications and backend systems. Available for freelance &amp; contracts. 2,100+ students cleared dues through NoDues at MITS. 4 production platforms live. 10+ shipped tools, APIs, and libraries.</desc>
+<title id="t">{title_esc}</title>
+<desc id="d">{desc_esc}</desc>
 {CSS}
 {defs_content}
 <!-- Top canvas header banner -->
@@ -209,10 +222,14 @@ svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" 
   <animate attributeName="stroke-dashoffset" values="{W};{W};0;0" keyTimes="0;0.04;0.22;1" dur="6.0s" begin="0s" fill="freeze"/>
 </line>
 
-<!-- Name "Usman" -->
+<!-- Name / Welcoming Greeting -->
 <g>
   <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.0250;0.1750;1" dur="6.0s" begin="0s" fill="freeze"/>
   {name_el}
+  <!-- Sleek live terminal cursor -->
+  <rect class="up" x="{cursor_x}" y="{cursor_y}" width="3.5" height="{cursor_h}" rx="1.5">
+    <animate attributeName="opacity" values="1;0;1" dur="1.0s" repeatCount="indefinite"/>
+  </rect>
 </g>
 
 <!-- Open to Internships status badge -->

@@ -1,4 +1,4 @@
-<img src="./assets/hero.svg" alt="Usman. Full-stack and AI engineer building real-time web applications and backend systems. Available for internships & freelance. 2,100+ students cleared dues through NoDues at MITS. 4 production platforms live. 10+ shipped tools, APIs, and libraries." width="100%">
+<img src="./assets/hero.svg" alt="Hi, I'm Usman. Full-stack and AI engineer building real-time web applications and backend systems. Available for freelance & contracts. 2,100+ students cleared dues through NoDues at MITS. 4 production platforms live. 10+ shipped tools, APIs, and libraries." width="100%">
 
 <p><img src="./assets/i-pin.svg" width="16" height="16" valign="middle"/> &nbsp;Madanapalle, Andhra Pradesh &nbsp;·&nbsp; Available for freelance</p>
 
@@ -93,8 +93,7 @@ flowchart LR
 
 ## Stack
 
-<img src="./assets/stack.svg" alt="Systems Architecture & Technical Capabilities Matrix" width="100%">
-
+<img src="./assets/stack.svg" alt="Product: React, Next.js, TypeScript, Tailwind, Framer Motion. Backend and data: Node.js, Express, NestJS, PostgreSQL, MongoDB, Prisma, Redis. AI: Python, FastAPI, LangChain, RAG pipelines, Gemini, Groq. Shipping: Vercel, Azure, Firebase, GitHub Actions." width="100%">
 
 ## Activity
 
